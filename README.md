@@ -68,10 +68,9 @@ pip install -r requirements.txt
 3️⃣ **Set Up Environment Variables**
 
 Create a `.env` file in the root directory with:
-
 ```
 REDDIT_CLIENT_ID=
-REDDIT_CLIENT_SECRET=_
+REDDIT_CLIENT_SECRET=  
 REDDIT_USER_AGENT=
 GROQ_API_KEY=
 
