@@ -1,0 +1,956 @@
+{
+    "posts": [
+        {
+            "id": "1lodkrw",
+            "title": "Copilot: Business AND Personal Subscription?",
+            "selftext": "The company I work for recently added Copilot Business to the org. I was using Copilot personal prior, but when they assigned a seat to me, I was given a refund for my subscription and now it seems my org manages my Copilot entirely.\n\nNow, I have zero control over Copilot, and my org has severely locked down the enabled features. Is it possible to continue paying for my own Copilot subscription and \"switch\" between the two as needed? Or is there another way to manage this other than creating a new GitHub account?",
+            "subreddit": "github",
+            "created_utc": 1751304376.0,
+            "permalink": "https://reddit.com/r/github/comments/1lodkrw/copilot_business_and_personal_subscription/",
+            "score": 0,
+            "url": "https://www.reddit.com/r/github/comments/1lodkrw/copilot_business_and_personal_subscription/"
+        },
+        {
+            "id": "1l37mv4",
+            "title": "Splitting Network Data to Two Devices (Network Tap?)",
+            "selftext": "Greetings r/networking!\n\nI'm trying to build something which I *think* should be simple, but while doing some digging I'm getting a bit confused, so I'm hoping someone can clear up my understandings.\n\nBasically, I have a stereo camera which sends data over an ethernet line to a host machine. What I want to do is \"split\" that ethernet line so that the data can be sent to two machines simultaneously: the host machine and a logging machine. The camera and the host machine should work the same as without this split while the logging machine receives a copy of all the data sent to the host machine so that it can, well, log the data without interfering with main system. My understanding is that we ought to be looking at a network tap, but there are aspects of this approach that seem a bit confusing to me.\n\nSome more details:\n\n1. Our goal is to minimize complexity and to make this logging machine as \"optional\" and non-critical as possible. That is, the logger should be able to get plugged in and just start working automatically without any additional configuration in the main system, and if the logger fails, the rest of the system should just keep operating without any issues.\n2. The camera system produces a lot of data, so we can't slow it down (hence why I'm focusing on something passive rather than incorporating a switch, etc.). It's also critical, so we don't want the logger to be a bottleneck or point of failure.\n3. We're mostly interested in the data coming off the camera (i.e., the flow of traffic in one direction), so we don't need to know what data is being passed from the host machine to the camera. The camera system uses UDP, so I believe we \"just\" need to capture those packets to get the data we want.\n\nNow, in *my* mind, we *should* be able to get away with something like a [basic ethernet splitter](https://www.amazon.com/LIEZHUA-Gigabit-Ethernet-Splitter-Simultaneously/dp/B0CGV5FDWM), since really all we need is a copy of the same exact signals being sent to the host machine from the camera. However, that seems *too* simple when [devices like this exist](https://www.amazon.com/midBit-Technologies-LLC-100-1000/dp/B0175EODCE) which seem to start around $200. When looking around, I see people mention devices like the [Throwing Star LAN Tap](https://www.amazon.com/Throwing-Original-Monitoring-Ethernet-Communication/dp/B0CH4ZLJ3F) which, again, is a lot cheaper than these $200 devices. It's also a bit perplexing why that basic ethernet splitter I linked requires external power while these throwing start LAN taps don't (I think).\n\nI imagine the difference in these devices come from different capabilities needed for the application, and I'm hoping that, for my application, we could get away with a very simple solution. However, networking is *not* my area of expertise, so I'm just trying to understand why there's such a huge difference in price, configurations, etc. I'm also trying to identify any part of this system that I'm just completely getting wrong, like how passively consuming a copy of a UDP stream would work.\n\nAny clarification, help, or direction would be appreciated!\n\nEdit: thanks for the discussion so far! Just wanted to add a few details which might help:\n\n1. We sell these cameras to customers who can have them configured in different ways. These devices are not very consumer friendly, so adding too much complexity isn't an option. This is why a \"pure\" hardware solution would be nice: it's a lot easier to get a customer to correctly configure how some ethernet lines are configured than it is to get them to run our software on their machine, etc. The \"dream\" is to just ship a separate device that the customer can just plug in without needing to configure or think about. Part of this is that it'd have to be optional and modular. We want to avoid building this into the camera itself because many customers will explicitly\u00a0*not*\u00a0want these extra capabilities for various reasons (it also helps to keep things modular for the sake of our production, etc.).\n2. I'm not sure what differences exist between the cameras out there, but here are the [docs for the cameras](https://docs.carnegierobotics.com/) I'm talking about. I suspect some of the suggestions assume something a bit simpler. These are effectively robotics modules, and I'd be capturing independent image messages (e.g., like via ROS). Not sure how much this changes things, but features you'd expect to find in traditional camera systems may not apply here. I'll add that there is other data that comes off of these cameras that aren't images that we'd also want to capture.\n3. We *really* want to avoid introducing hardware like switches into the mix. There's likely going to be a switch involved somewhere down the line anyways which will be the customer's switch and not ours so relying on it to be configured correctly is a hard sell. Adding more switches to the mix just to support this logger may be a bit too \"heavy\" to warrant. If it's truly the only way to handle this effectively, then so be it, but the hope is that we can do something much more passive, cheap, plug-and-play, etc.\n4. Some people have asked about multicast. To be honest, I'm not sure what that means on a technical level. These cameras a pretty complex pieces of hardware designed for things like robotics use-cases, and I *suspect* that a feature you'd expect to find in a traditional camera system won't be available. I'm asking around on this now.\n\nFor added context, I'm a cloud engineer and not someone who is familiar with these cameras nor with this kind of networking. My interactions with these cameras is purely through the data they end up producing which, by the time it gets to me, come in the form of ROS bags. My current task is figuring out if we can get the data from the camera to the cloud efficiently and conveniently, which is why I'm asking the specific questions I am.\n\nThanks everyone!",
+            "subreddit": "networking",
+            "created_utc": 1749048902.0,
+            "permalink": "https://reddit.com/r/networking/comments/1l37mv4/splitting_network_data_to_two_devices_network_tap/",
+            "score": 9,
+            "url": "https://www.reddit.com/r/networking/comments/1l37mv4/splitting_network_data_to_two_devices_network_tap/"
+        },
+        {
+            "id": "1l1oo85",
+            "title": "California Raisin",
+            "selftext": "",
+            "subreddit": "PaymoneyWubby",
+            "created_utc": 1748886715.0,
+            "permalink": "https://reddit.com/r/PaymoneyWubby/comments/1l1oo85/california_raisin/",
+            "score": 30,
+            "url": "https://i.redd.it/jxzu47k1di4f1.jpeg"
+        },
+        {
+            "id": "1ktune9",
+            "title": "QuickBooks Checking - \"Balance Refund\" Drained the Account?",
+            "selftext": "We keep some money in a QuickBook Checkings account, and two days ago two transactions occurred which completed drained the account. One was for the balance in one of our \"envelopes\" while the other was for the rest. Both transactions had a description of \"Balance Refund.\" We're not seeing that money in any of our banks, and we can't find any more information through the online app. We've only ever transferred money into this account from one of our banks and have only ever transferred money out to the state to pay taxes. Luckily it's not a catastrophic amount of money, but it's enough that it can't be ignored.\n\nWe've tried for an hour today to get through to support, but we keep failing the verification challenge and we're not sure what information we're not providing properly, so we've given up on that route for now. Our account is only accessible by three people, and we use MFA, etc. No other weird behavior has been spotted.\n\nDoes anybody have any clue what this is? Is this a legitimate fraudulent charge? Or is QuickBooks doing something weird here? On May 14th, we got an email saying that we needed to update information in our QB Checking account or it would be suspended in 15 days, but it didn't make sense since all of our information was already up to date, then, 5 days later, we got another email from QB saying that email was sent in error and to ignore it, so we figured it was all good. Could that be related?\n\nAlso, if anybody is reading this and wondering if they should use QuickBook Checkings or not, my recommendation is to definitely not to. I can't get any information from anyone despite being able to provide them any detail they want. The support line is awful, the waits are long, the people on the other end are hard to hear and apathetic, and they just had me calling back to spin the wheel on which set of 6 pieces of information they needed without telling me what information I'm incorrectly providing *despite* telling them exactly what is listed in the account. So, you know, it's not a fun experience when all of the money from your account has been drained and nobody is willing to even let you know if they have any clue why that occurred. We're certainly not putting any more money in that account.",
+            "subreddit": "QuickBooks",
+            "created_utc": 1748034532.0,
+            "permalink": "https://reddit.com/r/QuickBooks/comments/1ktune9/quickbooks_checking_balance_refund_drained_the/",
+            "score": 3,
+            "url": "https://www.reddit.com/r/QuickBooks/comments/1ktune9/quickbooks_checking_balance_refund_drained_the/"
+        },
+        {
+            "id": "1jc7t59",
+            "title": "Waveshare ESP32-S3 Touch LCD 1.28 - Screen Not Working with MicroPython",
+            "selftext": "Greetings!\n\nI've recently tried working with the [Waveshare ESP32-S3 Touch LCD 1.28](https://www.waveshare.com/wiki/ESP32-S3-Touch-LCD-1.28), and I'm having issues getting the screen to work when running MicroPython.\n\nThis is actually the *second* one of these I've tried (thinking I might have goofed the first one up at some point), but I'm seeing the same behavior. When I first open the device and plug it in, the screen works and I can see the demo program on it. I then flash it with MicroPython (following that wiki page as well as [this video](https://www.youtube.com/watch?v=g4ZVXwt5ueA)), but when I load the demo Python files and run them with Thonny, the screen is just off. MicroPython works (I can run them via Thonny and see things print to the console), but I can't get the screen to turn on, let alone display anything.\n\nWhen I run the \\`alien.py\\` demo, i.e., the following code:\n\n    import gc\n    import random\n    from machine import Pin, SPI\n    import gc9a01\n    \n    gc.enable()\n    gc.collect()\n    \n    \n    def main():\n        '''\n        Decode and draw jpg on display\n        '''\n        tft = gc9a01.GC9A01(\n            SPI(2, baudrate=80000000, polarity=0, sck=Pin(10), mosi=Pin(11)),\n            240,\n            240,\n            reset=Pin(14, Pin.OUT),\n            cs=Pin(9, Pin.OUT),\n            dc=Pin(8, Pin.OUT),\n            backlight=Pin(2, Pin.OUT),\n            rotation=0)\n            \n        # enable display and clear screen\n        print(\"enabling screen\")\n        tft.init()\n        print(\"screen enabled\")\n    \n        # display jpg in random locations\n        while True:\n            tft.rotation(random.randint(0, 4))\n            tft.jpg(\n                \"alien.jpg\",\n                random.randint(0, tft.width() - 30),\n                random.randint(0, tft.height() - 30),\n                gc9a01.FAST)\n    \n    \n    main()\n\nI can see it print \"enabling screen\" and \"screen enabled,\" but then nothing actually happens on the screen. If run their demo \"cst816s\\_example.py\", I get an error:\n\n    Traceback (most recent call last):\n      File \"<stdin>\", line 6, in <module>\n      File \"cst816.py\", line 109, in __init__\n      File \"cst816.py\", line 146, in stop_sleep\n      File \"cst816.py\", line 113, in _i2c_write\n    OSError: [Errno 19] ENODEV\n\nResetting the device doesn't do anything while I'm connected to my PC, but when I just connect the device to power and press the reset the button, the screen *does* turn on, but it's just black. If I setup \\`boot.py\\` to load any of these scripts (like alien.py), nothing happens (the screen turns on, but it's just black).\n\nI've erased it, re-flashed it, tried different MicroPython .bins, tried different configurations, tried different USB cords, etc., and none of it helps.\n\nI'm pretty inexperienced with microcontrollers, but I have used them before (including ESP32s with screens running MicroPython), so I'm pretty sure I'm not making some obvious mistake. And, like I said, this is the second one I got and it's doing the same exact thing, so I don't think it's the hardware.\n\nDoes anybody see what I might be doing wrong? Or how I might approach troubleshooting this? I feel like I'm at a bit of a dead-end. I *haven't* tried using Arduino to test it. I started to, but it got complicated enough that I wanted to make sure I've exhausted all of my other options before dedicating that time (mostly since I *need* to use MicroPython).\n\nAny help or suggestions are appreciated! Thanks!",
+            "subreddit": "esp32",
+            "created_utc": 1742080468.0,
+            "permalink": "https://reddit.com/r/esp32/comments/1jc7t59/waveshare_esp32s3_touch_lcd_128_screen_not/",
+            "score": 2,
+            "url": "https://www.reddit.com/r/esp32/comments/1jc7t59/waveshare_esp32s3_touch_lcd_128_screen_not/"
+        },
+        {
+            "id": "1jc7qlg",
+            "title": "Waveshare ESP32-S3 Touch LCD 1.28 - Screen Not Working with MicroPython",
+            "selftext": "[removed]",
+            "subreddit": "esp32",
+            "created_utc": 1742080256.0,
+            "permalink": "https://reddit.com/r/esp32/comments/1jc7qlg/waveshare_esp32s3_touch_lcd_128_screen_not/",
+            "score": 1,
+            "url": "https://www.reddit.com/r/esp32/comments/1jc7qlg/waveshare_esp32s3_touch_lcd_128_screen_not/"
+        },
+        {
+            "id": "1i25cpc",
+            "title": "Got Your Number, Scarface19999",
+            "selftext": "Scarface19999, posted this on 01/15/24 across a number of different subreddits.\n\n>I'm 22 going for 23 and i currently have 0 qualifications. I didn't go to University because i failed the entrance exams twice. (I'm in Europe, there's no community college or military here like in the US). I tried getting a trade but i failed miserably. I was also born with a heart condition that doesn't allow me to lift heavy weights and i also suffer from an autoimmune neurological disease.\n\n>Since i graduated I've worked a little bit in dead end jobs like warehouses etc. But I have nothing to currently put in my CV (I've been unemployed for 1.5 year now). All of my friends have left me, they think that im a loser so nobody hangs out with me anymore. I don't have anyone that i can call a friend. I've spend the past 4 years mostly in my house playing video games and watching movies. I have no social life, it's very awkward and hard for me to talk to people irl. I think that everyone I talk to gets weirded out in some extent, but it's maybe because I've been alienated for a long time now. It also doesn't help that im incredibly ugly too and my face is malformed\n\n>I can't also do simple tasks like for example, drive. I can't drive to save my life (we only have manuals here). Every time i sit behind the wheel i think that im gonna kill myself because I'm not \"smart\" enough. I'm very slowly compared to everyone else , i feel like everyone is moving too fast on the road and that my reflexes are terrible. I also seem to not have a good sense of space. I find it hard to park in small spaces or stay on my lane in highways.\n\n>I was never diagnosed with a mental or a learning disability but I'm genuinely incredibly bad and clumsy at everything i try. I used to have an incredible memory but now i forget everything i read after a few minutes. I find it hard understanding simple tasks and there are times when my 10 year old cousins beat me in games like puzzles.\n\n>Every one from my school has already graduate from university and is either working or doing their masters. And I'm still currently at the same place i was after i graduated. I don't see any way out of it. I have no prospects, talent or drive to do anything. There's nothing that really interests me in life and I'm generally very afraid of everything.\n\n>My family is also a mess. I don't want to go in depth, but the relationships between us are shattered. I feel like a leech because i still live with my parents and they still feed me, but I'm not capable of standing on my own feet atm. (most people live their parents home until they become 30 in my country)\n\n>2025 gave me a panic attack. I think that it's only going downhill from now on. Every year i get worse and worse. The only good thing is that i don't use any kind of drugs (weed, alcohol etc) and that I have a relatively normal weight.\n\n>Is there any way that i could improve? I've been in the same loop for 4 years now. Is it possible to escape? Bare in mind that I'm probably neurodivergent but it's so hard to get diagnosed in my country...\n\nJust keeping this for future reference!",
+            "subreddit": "u_Nater5000",
+            "created_utc": 1736968812.0,
+            "permalink": "https://reddit.com/r/u_Nater5000/comments/1i25cpc/got_your_number_scarface19999/",
+            "score": 1,
+            "url": "https://www.reddit.com/r/u_Nater5000/comments/1i25cpc/got_your_number_scarface19999/"
+        },
+        {
+            "id": "1gdgpvw",
+            "title": "Next Steps for Dealing with Leak in Bathroom?",
+            "selftext": "The shut-off valve for the toilet in our first floor bathroom sprung a leak overnight which we noticed the next morning. The leak wasn't *too* crazy, but it was bad enough that the water was dripping into the basement right below the bathroom. We managed to fix the leak by replacing the valve, but now we're not sure how to proceed with dealing with potential water damage. We did dry everything to our best abilities and got a large dehumidifier which we put in the basement and have been running non-stop, but we're not sure if we need to call a professional to handle this, or if there's anything else we should do to treat the issue ourselves, or if there's someway to figure out what kind of damage we may be looking at, etc.\n\nWhen we first noticed the leak, we made an appointment for a plumber (which is scheduled for tomorrow), but we're probably going to cancel that since we have resolved the actual plumbing issue. But now we're not sure if the next step should be to hire someone to assess and handle the actual water damage, or if that is something we can do ourselves. I don't mind spending the money to do this the right way, but my concern is that hiring anybody to handle this kind of problem will always opt for the more \"cautious\" (i.e., expensive) approach when it may not be necessary.\n\nAny thoughts on this? I can't find any good suggestions for handling such an assessment myself (which leads me to believe it may be best for a professional to handle it), but I can't really imagine a professional would be able to do anything beyond what I can do, at this point, other than recommending some standard procedure.",
+            "subreddit": "homeowners",
+            "created_utc": 1730051257.0,
+            "permalink": "https://reddit.com/r/homeowners/comments/1gdgpvw/next_steps_for_dealing_with_leak_in_bathroom/",
+            "score": 4,
+            "url": "https://www.reddit.com/r/homeowners/comments/1gdgpvw/next_steps_for_dealing_with_leak_in_bathroom/"
+        },
+        {
+            "id": "1fjr21u",
+            "title": "Help Translating VRChat Italian Lemon",
+            "selftext": "I recently saw this video: https://streamable.com/14185k\n\nAnd I'm having a hard time recognizing what the lemon is saying. Considering the context, I assume it's quite informal and goofy, so I was wondering if someone more familiar with Italian could better understand them.\n\nI hear, \"Io sono from Italia,\" which seems like it might be mixing Italian and English? Then \"viva Italia, per favore\" which kind of makes sense, although the \"per favore\" doesn't make sense, to me, in this context. Then, the lemon starts singing what sounds like \"Che la Luna,\" although the lyrics seem a bit jumbled and they add some exclamations. The video ends with the lemon saying, \"how you doing today?\" (Clearly English).\n\nI'm more curious how this sounds to those who are more fluent in Italian, since it sounds very casual and maybe not even \"real\" Italian (like someone pulling some words they know here and there to make it sound Italian).",
+            "subreddit": "italianlearning",
+            "created_utc": 1726660895.0,
+            "permalink": "https://reddit.com/r/italianlearning/comments/1fjr21u/help_translating_vrchat_italian_lemon/",
+            "score": 20,
+            "url": "https://www.reddit.com/r/italianlearning/comments/1fjr21u/help_translating_vrchat_italian_lemon/"
+        },
+        {
+            "id": "1dfzggs",
+            "title": "\"Ant\" Robot Availability?",
+            "selftext": "",
+            "subreddit": "robotics",
+            "created_utc": 1718394330.0,
+            "permalink": "https://reddit.com/r/robotics/comments/1dfzggs/ant_robot_availability/",
+            "score": 1,
+            "url": "/r/reinforcementlearning/comments/1dfzfqe/ant_robot_availability/"
+        },
+        {
+            "id": "1dfzfqe",
+            "title": "\"Ant\" Robot Availability?",
+            "selftext": "Some of you may be aware of the classic [Ant environment](https://gymnasium.farama.org/main/environments/mujoco/ant/), which is provides a relatively easy-to-learn 3D physics problem in RL. Does anybody know if an actual, physical implementation of the \"ant\" robot exists anywhere? I tried to look around, but couldn't find anything (granted, it's a bit difficult to search for). I'd be open to building it myself, especially if there's a relatively easy way to 3D print it's components, but I'm really hoping to be able to perform transfer learning to take a model trained in a MuJoCo simulation and have it operate in the physical robot, and this would require the model/robot to be pretty similar.\n\nIf not, does anybody have any recommendations for a similar robot? I'm assuming it'd be easier to find an accessible robot and create a MuJoCo model based on it rather than the other way around, but ideally something already set up for this kind of work already exists. I specifically want to focus on this kind of locomotion, so things like robot hands/arms or vehicles wouldn't work for me.",
+            "subreddit": "reinforcementlearning",
+            "created_utc": 1718394277.0,
+            "permalink": "https://reddit.com/r/reinforcementlearning/comments/1dfzfqe/ant_robot_availability/",
+            "score": 6,
+            "url": "https://www.reddit.com/r/reinforcementlearning/comments/1dfzfqe/ant_robot_availability/"
+        },
+        {
+            "id": "17xjigm",
+            "title": "Using (Sub)Partitions to Mitigate (Potential) Performance Issues Due to Increased Stored Data in Rows?",
+            "selftext": "Greetings!\n\nI've been working on an application which is based around relatively large time series data which I'm storing in PostgreSQL, and I'm looking for some validation/criticisms of a plan to deal with a new feature.\n\nFor context, we're running PostgreSQL 14 in Aurora Serverless (we'll probably be upgrading to 15 soon, though). We have a table, `record`, which is partitioned by a UUID column, `log_id`. The `record` table contains our time series data, and the relevant columns are a BIGINT `timestamp` column, the UUID `log_id` column, a UUID `topic_id` column, and a JSONB `data` column. The record table has a composite primary key based on `log_id`, `topic_id`, and `timestamp`. These tables can get pretty large, storing up to 10 million rows each. Currently, we've avoided foreign-keys on this table to improve performance (we can warrant this due to how \"detached\" the `record` table is from the rest of the application). I'm open to suggestions/criticisms on this setup, but we've found that it works quite well for our application, mostly because our access patterns are based around always including a `log_id` and `topic_id` filter in our queries.\n\nNow, the `data` field is where things get interesting. This JSONB field is currently constrained to being somewhat small (under 64kb), but we want to allow larger data in this field (say, up to 1mb). My expectation is that this can cause significant increases in memory usage (among other things) and degrade performance. To counter this, I'm considering using a subpartition on the `record` table based on `topic_id`. This seems pretty natural considering the table's current configuration and our access patterns.\n\nWith that being said, topics aren't as \"nice\" as logs in our application's context. Each log can have up to 1,000 topics, and some of those topics may have very little (if any) records. The expected size of the `data` column is also generally consistent across a given topic, meaning that there can be one topic with few records and small-sized data while another topic can have many records with large data. These \"hotspots\" lead me to question if partitioning by `topic_id` would actually be effective. Furthermore, we'll be introducing many more partitions as a result, which is concerning. Although the query patterns ought to make these deficits somewhat negligible, I fear that I'm going to be introducing some serious overhead that I'm not currently aware of which may be costly. Of course I'll be running tests to verify things, I figured seeing other's thoughts would be a good idea.\n\nSo, anybody have opinions on this? It seems reasonable on paper, but it wouldn't be the first time a database optimization seemed reasonable and turned out to be a disaster. Really my focus is mitigating exceptional increases in memory usage due to the larger `data` field. I'll also add that I'd love to use Timescale here, but we have to stick with Aurora Serverless, making that not feasible.\n\n**tl;dr:** We have a partitioned table based on a `log_id` column. Almost all queries include both a `log_id` and a `topic_id` filter. We're going to be allowing users to store more data in these rows, and we want to mitigate potential performance degradation by creating a subpartition based on `topic_id`. Partitions are scary, so I'm looking for second opinions.",
+            "subreddit": "PostgreSQL",
+            "created_utc": 1700240245.0,
+            "permalink": "https://reddit.com/r/PostgreSQL/comments/17xjigm/using_subpartitions_to_mitigate_potential/",
+            "score": 3,
+            "url": "https://www.reddit.com/r/PostgreSQL/comments/17xjigm/using_subpartitions_to_mitigate_potential/"
+        },
+        {
+            "id": "z6blnk",
+            "title": "Looking for information about a \"hedge broker\" career path",
+            "selftext": "[removed]",
+            "subreddit": "FinancialCareers",
+            "created_utc": 1669580794.0,
+            "permalink": "https://reddit.com/r/FinancialCareers/comments/z6blnk/looking_for_information_about_a_hedge_broker/",
+            "score": 1,
+            "url": "https://www.reddit.com/r/FinancialCareers/comments/z6blnk/looking_for_information_about_a_hedge_broker/"
+        },
+        {
+            "id": "qam0oc",
+            "title": "Any good books on nutrition?",
+            "selftext": "Specifically, nutrition from the productivity perspective.  That is, I'm not trying to become a nutrition expert nor am I interested in any particular diet, but, rather, that I'm trying to understand how I should best understand and structure my nutrition to promote productivity.\n\nObviously I understand the basics, and I do a decent job in eating regularly, meeting rough macronutrient requirements, even meal-prepping, etc., but I can't necessarily say I understand why I do most of the things I do with regards to nutrition other than some aspects of it that came from trial and error and others that have just been passed down as general advice.  I just think there's probably some layer of knowledge I could quickly get up-to-speed on to help me make better informed decisions with regards to my nutrition.\n\nAny book recommendations or thoughts on this?  Some quick searching of the subreddit didn't yield much.  And like I said, I'm not necessarily interested in advice (there's plenty of that available), but rather learning about systematic decision making with regards to nutrition (i.e., the science of it, at least from a practical perspective).\n\nAlternatively, I'd be willing to discuss this kind of stuff with an actual nutritionist (something I've been considering), but I can't imagine it'd be worth the effort, unless anybody has any experiences suggesting otherwise?",
+            "subreddit": "productivity",
+            "created_utc": 1634561324.0,
+            "permalink": "https://reddit.com/r/productivity/comments/qam0oc/any_good_books_on_nutrition/",
+            "score": 4,
+            "url": "https://www.reddit.com/r/productivity/comments/qam0oc/any_good_books_on_nutrition/"
+        },
+        {
+            "id": "oksknw",
+            "title": "External Monitoring Solutions?",
+            "selftext": "Hey r/aws!\n\nI have a serverless application that I'm running on AWS, and I'm finding that using the console to keep track of various metrics, events, etc. is a bit unwieldy.  We're currently planning an admin dashboard which would centralize a lot of our in-app monitoring data, and I figured it may be suitable to also include other information (such as what you'd find through CloudWatch) as well.\n\nObviously we could use boto3 to pull data from the various services we're using and provide that data as-is via a REST endpoint (or something along those lines), but I'm just curious if something like this already exists and is readily usable.  Since we're not doing anything particularly fancy, I figured an out-of-the-box solution would probably work well, and it could save considerable development time for a feature which is ultimately just a \"nice to have.\"\n\nI'm not only curious about a backend solution, but a front-end solution as well.  Ideally, we'd be able to setup an isolated backend endpoint/microservice with minimal configuration and plug-in a compatible front-end component to interact with it, essentially giving us a CloudWatch dashboard from our app that we can customize as needed.  Of course, I'd take anything I can get, and so far Googling hasn't returned any good results.\n\nAnybody have any recommendations or thoughts on this?  As it stands, it looks like I'm going to have to roll this out myself (which really isn't a big deal), but I just feel like this *had* to have been done before, and I'm surprised it's not as much of a \"thing\" as I originally anticipated.",
+            "subreddit": "aws",
+            "created_utc": 1626354799.0,
+            "permalink": "https://reddit.com/r/aws/comments/oksknw/external_monitoring_solutions/",
+            "score": 2,
+            "url": "https://www.reddit.com/r/aws/comments/oksknw/external_monitoring_solutions/"
+        },
+        {
+            "id": "oeb5t0",
+            "title": "Trade-offs between Aurora Serverless and PostgreSQL for dealing with lots of data",
+            "selftext": "Greetings r/aws,\n\nI've been trying to figure out an optimal database configuration for dealing with large, partitioned tables in PostgreSQL, and was hoping others had some insight into this.\n\nI need to store a lot of timeseries data into a table (potentially up-to billions of rows), and I'm convinced table partitioning would make the most sense.  The data comes in discrete chunks which form natural partitions, so I'd probably use LIST partitioning over RANGE partitioning given the typical query patterns.  Based on this strategy, each partition can have up-to dozens of millions of rows, and there could be thousands of partitions.\n\nNow, I'm not too sure how this will actually work out in practice (I've never dealt with this kind of scale before, but based on what I've read, it's not *too* crazy), but I'm getting hung-up on the infrastructure decisions.  Aurora Serverless would be *really* nice to have, since the application is serverless (and I'd be leveraging the Data API) and the scaling features of Aurora Serverless make a lot of sense for the application's usage.  However, Aurora Serverless only supports up to PostgreSQL 10.14, which *does* have partitioning functionality, but it's apparently significantly less robust than what the later versions offer.  It's tolerable to use provisioned Aurora, which would let us use up to PostgreSQL 12.6, but this is a significant trade-off that we'd only want to make if it was *really* worth it.\n\nMy question is: based on these specifications, would you try to make Aurora Serverless work?  Or am I going to run into issues which will force us to use a later version of PostgreSQL, and thus provisioned PostgreSQL, down the line anyways?  My main concern is dealing with the partitioning, which I believe is going to be the \"trick\" that makes this work at scale, and how the choice between serverless vs provisioned will affect this choice.\n\nObviously this is probably not something that can be determined without implementing something and seeing how it works.  I'm hoping the serverless approach will work, but I just want to avoid investing a lot of time into that approach if it turns out this is doomed from the start based on some detail I wasn't aware of.\n\n**tl;dr:** Aurora Serverless limits PostgreSQL version to 10.14 while Aurora provisioned offers PostgreSQL 12.6.  Partitioning in PostgreSQL matured significantly between versions 10 and 12.  I'm trying to understand the trade-offs between using serverless vs using PostgreSQL 12 in terms of dealing with very large, partitioned tables.",
+            "subreddit": "aws",
+            "created_utc": 1625503354.0,
+            "permalink": "https://reddit.com/r/aws/comments/oeb5t0/tradeoffs_between_aurora_serverless_and/",
+            "score": 1,
+            "url": "https://www.reddit.com/r/aws/comments/oeb5t0/tradeoffs_between_aurora_serverless_and/"
+        },
+        {
+            "id": "nt8xno",
+            "title": "Casting Shorts?",
+            "selftext": "I see that whenever I try to add a \"short\" to my queue while I'm playing videos on my Chromecast, it tells me I need to disconnect. Presumably, it's simply not currently possible to do so.\n\nIs there any idea of whether or not this will be possible? I'm guessing this is intentional, seeing how the format is made to be viewed quickly on a personal device (like Instagram). But I mostly use YouTube for watching videos on my TV, so not having access to this content would be pretty stupid and reminiscent of the dumb moves made by Quibi.\n\nThoughts on this? I doubt it's a technical limitation, so I'm just hoping it's not permanent, cause I can't think of a good reason why YouTube would actively hinder engagement like this.",
+            "subreddit": "youtube",
+            "created_utc": 1622937821.0,
+            "permalink": "https://reddit.com/r/youtube/comments/nt8xno/casting_shorts/",
+            "score": 6,
+            "url": "https://www.reddit.com/r/youtube/comments/nt8xno/casting_shorts/"
+        },
+        {
+            "id": "n9hhyy",
+            "title": "Any Tips for Technical Project Planning?",
+            "selftext": "Specifically, I have a long-term personal project that I've been working on, and I need to really pin-down some of the details so that I can start planning around them.  I'm just not sure where to start.\n\nI'm not really interested in specific tools or apps, but more general approaches or workflows.  If it matters, this is a technical project involving a lot of software development.  I *do* use Trello, TrackingTime, and Google Docs/Sheets already, but my issue is more with getting the general ideas and timelines in my brain into these apps.  I can't help but make tickets too general or specific, or stare at a blank Google doc trying to figure out what's actually pertinent (normally the project managers deal with this stuff \u00af\\\\\\_(\u30c4)\\_/\u00af).\n\nAs of now, I've just been working on the initial research and discover, but at some point I'm going to have to start building something and I just want to get off to the right start.  I'll probably be hiring freelancers throughout the course of this project, which makes good planning that much more critical.  My general, tentative timeline is for this to take \\~1.5 years to complete.\n\nI *believe* this question is suitable for this subreddit, since, ultimately, the point of the project planning is to make my work more productive.  My current issue is that I can't seem to be productive about with the process of planning itself, making this doubly about productivity.  But let me know if there's a more suitable subreddit.\n\nAny advice or recommended resources would be appreciated, thanks!",
+            "subreddit": "productivity",
+            "created_utc": 1620684429.0,
+            "permalink": "https://reddit.com/r/productivity/comments/n9hhyy/any_tips_for_technical_project_planning/",
+            "score": 2,
+            "url": "https://www.reddit.com/r/productivity/comments/n9hhyy/any_tips_for_technical_project_planning/"
+        },
+        {
+            "id": "n765dn",
+            "title": "Any Good Resources for Learning Information Theory Casually?",
+            "selftext": "I'm interesting in learning a bit about information theory and get an idea of it's landscape without getting lost in the details.  I'm not very interested in learning about it in any sort of applicable sense, just enough to know when something can be related to it.  I think if I can get to a point where I can tie in information theory to probability theory in a really solid way, I'd be satisfied.\n\nA good example of what I'm looking for is something like the book [G\u00f6del's Proof](https://www.amazon.com/G%C3%B6dels-Proof-Ernest-Nagel/dp/0814758371) by Ernest Nagel, which does a great job of providing the necessary background (including motivation and history) and explaining the details of the actual theorems without forcing the reader to \"study\" anything.  If I can find a book that does something similar with information theory (i.e., technical enough to be engaging, casual enough to not be work), that'd be perfect.\n\nI'd also be open to blogs, videos, etc. or if anyone just wants to explain it in general from their own perspective, I'd be all ears lol.  For context, I have a decent background in math, and have studied foundational math and probability pretty extensively.  So my hope is that I can kind of just glide through a decent book on information theory without too much issue.  Thanks!",
+            "subreddit": "math",
+            "created_utc": 1620414163.0,
+            "permalink": "https://reddit.com/r/math/comments/n765dn/any_good_resources_for_learning_information/",
+            "score": 2,
+            "url": "https://www.reddit.com/r/math/comments/n765dn/any_good_resources_for_learning_information/"
+        },
+        {
+            "id": "n5pb46",
+            "title": "What is this rusty-colored, organic-looking, wrinkly orb that has commandeered this abandoned birds nest? It's been here for at least a month, and hasn't moved or anything since we first noticed it (although it may have grown/evolved a bit).",
+            "selftext": "",
+            "subreddit": "whatisthisthing",
+            "created_utc": 1620245437.0,
+            "permalink": "https://reddit.com/r/whatisthisthing/comments/n5pb46/what_is_this_rustycolored_organiclooking_wrinkly/",
+            "score": 1,
+            "url": "https://imgur.com/oFvYFY9"
+        },
+        {
+            "id": "mv37p3",
+            "title": "Thoughts on setting up an LLC early on?",
+            "selftext": "Greetings r/algotrading,\n\nDoes it make sense to setup an LLC for an algotrading business before any substantial trading is taking place?\n\nI've been passively trading for a few years now, with the plan to slowly ramp into a more automated system as I get more time and capital in place.  I'm now at the point where I'm starting to spend significant money on this venture (trading, data, cloud services, books, courses, etc.), and was looking into how I should handle this optimally.  It would seem starting an LLC may be a good option to write-off these expenses.\n\nMy concern is that my \"business\" isn't really anything yet, other than loose research and some infrequent trading, and I don't know if this poses a problem or may cause one down the road.  Of course, I don't want to wait until *after* I've spent all of the time and money on building a business to start writing off expenses, so it seems like it would make sense to setup something like an LLC sooner rather than later.\n\nI'm still looking into some of the ins-and-outs of this stuff, and obviously I'll talk to professionals (such as [Green Trader Tax?](https://greentradertax.com/services/entity-formation/)) before making any serious decisions, but I figured I better get a good understanding of this stuff prior to any of this and assumed people on here would have some insight into this.\n\nI've searched around and can't find any clear answers, so I'm specifically curious about the tax implications of this or if there's a way to take advantage of these expenses without starting an entity or something.\n\nThanks!\n\nEdit:  Although it's pretty far away from this point that I don't think it should be *heavily* considered, I do plan on hiring people (probably contract developers) to help build some of this stuff down the line.  Again, I don't think I'd make an LLC solely based on this fact (and I'm not even sure if getting an LLC would be that beneficial with respect to this), but that is a factor.\n\nAnother thing I'm considering is that I've had family and friends who want to invest with me as well.  This, like with everything else, is something that I'm probably not going to deal with anytime soon, but the plan would be to do this at some point as well.  If getting an LLC can help with this regard, it'd be another plus.",
+            "subreddit": "algotrading",
+            "created_utc": 1618960999.0,
+            "permalink": "https://reddit.com/r/algotrading/comments/mv37p3/thoughts_on_setting_up_an_llc_early_on/",
+            "score": 115,
+            "url": "https://www.reddit.com/r/algotrading/comments/mv37p3/thoughts_on_setting_up_an_llc_early_on/"
+        },
+        {
+            "id": "khjikm",
+            "title": "How to deserialize bytes from ROS Bag?",
+            "selftext": "Greetings r/ROS!\n\nI'm trying to figure out how to deserialize a range of bytes corresponding to a [Message Data record](http://mirror.umd.edu/roswiki/Bags(2f)Format(2f)2(2e)0.html#Message_data) from a ROS bag, but I can't seem to get it working.  I'm using Python, and trying to do something like this:\n\n    from sensor_msgs.msg import Image\n    \n    with open('data.bin', 'rb') as f:\n        data = f.read()\n        img = Image()\n        img.deserialize(data)\n\nwith `data.bin` being the extracted range of bytes corresponding to the Message Data record from a ROS bag (of the Image type).  When trying to do this, I'll get an error like the following:\n\n    genpy.message.DeserializationError: unpack requires a buffer of 8 bytes\n\nWhich most likely refers to a buffer underfill (according to the hint in the traceback).  My original guess was that I was including (or not including) the right range of bytes, e.g., maybe it expects only the data portion of the record rather than the header + the data, but no different range works (they all end up with some variation of that error, just with different amounts of bytes that it requires).  So I'm thinking I'm just doing this wrong.\n\nI know that the record bytes I'm using at least contains the Image data, as I'm able to extract the images out using more \"hacky\" methods, so it would seem I'm missing some information that the deserializer expects, but I can't figure out what.  The docs don't help, and there's way too many variables for me to guess and check.\n\nDoes anything stand out as being really wrong in my approach?  Or I'm just looking at this completely wrong?  Thanks for any help or suggestions!\n\nEDIT: I figured it out, and it was a mistake on my end.  The approach I outlined does work; I had just misinterpreted how header/data lengths were being interpreted and used.",
+            "subreddit": "ROS",
+            "created_utc": 1608564484.0,
+            "permalink": "https://reddit.com/r/ROS/comments/khjikm/how_to_deserialize_bytes_from_ros_bag/",
+            "score": 3,
+            "url": "https://www.reddit.com/r/ROS/comments/khjikm/how_to_deserialize_bytes_from_ros_bag/"
+        },
+        {
+            "id": "k4uq4b",
+            "title": "ROS bag summary without access to entire file?",
+            "selftext": "Greetings r/ROS!\n\nI have some large ROS bags sitting in S3 that I would like to be able to get a summary out of without having to download the whole file.  I don't know much about ROS bags, but my guess (hope) is that such metadata is contained in the header of the file.  If that's true, I figured I could stream in a [sufficient amount of bytes from a stream](https://botocore.amazonaws.com/v1/documentation/api/latest/reference/response.html#botocore.response.StreamingBody.read) to either use the ROS library to read the summary or just parse it myself.\n\nI looked around to see if others have discussed this, but couldn't find anything.  I tried a few approaches to stream in the data and use the [Python API](http://wiki.ros.org/rosbag/Code%20API#Python_API) to read it, but couldn't get anything to work.  I'm not sure where to begin with parsing it myself, so I figured I'd ask on here if anyone has done anything similar or if they have any pointers with where I should I start with trying to accomplish this task.\n\nThanks!",
+            "subreddit": "ROS",
+            "created_utc": 1606858574.0,
+            "permalink": "https://reddit.com/r/ROS/comments/k4uq4b/ros_bag_summary_without_access_to_entire_file/",
+            "score": 1,
+            "url": "https://www.reddit.com/r/ROS/comments/k4uq4b/ros_bag_summary_without_access_to_entire_file/"
+        },
+        {
+            "id": "jw23s9",
+            "title": "Autonomous Driving Data Lake: Further Reading Suggestions?",
+            "selftext": "Greetings r/aws!\n\nI recently came across this AWS Architecture Blog post, [Field Notes: Building an Autonomous Driving and ADAS Data Lake on AWS](https://aws.amazon.com/blogs/architecture/field-notes-building-an-autonomous-driving-and-adas-data-lake-on-aws/), and wanted to see if anyone had any suggestions for similar material.  I'd also appreciate any other suggestions or comments regarding this kind of stuff (especially with respect to automation and robotics) or data lakes in the cloud in general.\n\nThanks!",
+            "subreddit": "aws",
+            "created_utc": 1605648969.0,
+            "permalink": "https://reddit.com/r/aws/comments/jw23s9/autonomous_driving_data_lake_further_reading/",
+            "score": 3,
+            "url": "https://www.reddit.com/r/aws/comments/jw23s9/autonomous_driving_data_lake_further_reading/"
+        },
+        {
+            "id": "jao1xm",
+            "title": "Should I avoid a commute across a river?",
+            "selftext": "Greetings!\n\nI will be moving to Pittsburgh in a few months for a job, and have been looking at buying a home. I'm not familiar with the area, but my work is located in Lawrenceville, between the river and the Allegheny Cemetery.\n\nI've noticed prices are significantly higher in and around Lawrenceville compared to areas on the other side of the rivers. With that being said, I would prefer to have a short commute, possibly within a distance that could make walking/biking feasible. It would also seem that Lawrenceville and the surrounding neighborhoods are neat and worth being close to in themselves.\n\nMy question is: **is it worth trying to stay near my job (and in or near Lawrenceville) or is the commute not bad or significant enough to warrant the higher costs?**\n\nMy biggest concern is having to commute across the river using the bridge. I'm not sure how that might work there, but I'm used to bridges being something worth avoiding for daily commutes. Of course, if it's something where the traffic gets bad *in* Lawrenceville, and the commute time from across the river and over the bridge is relatively negligible, then it may not make sense to pay *that* much more to get closer. \n\nIf it matters: I live with my girlfriend (we're both in our mid/late 20s), and we do like exploring and checking out restaurants, shops, cafes, etc. on foot where we live now (Elmwood in Buffalo, NY). We've visited Pittsburgh before (a few times only briefly), and we'll be visiting more in the following months, but I'd like to get an idea as to what I should be looking for in terms of neighborhoods and boundaries and stuff.\n\nAny other advice or suggestions would be appreciated. Thanks!",
+            "subreddit": "pittsburgh",
+            "created_utc": 1602628150.0,
+            "permalink": "https://reddit.com/r/pittsburgh/comments/jao1xm/should_i_avoid_a_commute_across_a_river/",
+            "score": 9,
+            "url": "https://www.reddit.com/r/pittsburgh/comments/jao1xm/should_i_avoid_a_commute_across_a_river/"
+        },
+        {
+            "id": "iq854k",
+            "title": "[Request] Fall comic from last year (or so)",
+            "selftext": "Greetings r/comics!\n\nFirst, I hope this post is fine (I didn't see anything saying a request isn't allowed).\n\nI'm looking for a web comic that I saw last year (although it may be older).  I forget most of the details, but I believe it's black and white and is narrated by a female.  The comic is essentially the narrator listing off things they like about autumn.  The last two panels has the narrator's character looking at a set of small gourds/pumpkins, with the last frame showing the character hovering over and oggling the vegetables.\n\nI can't find it anywhere, mostly due to how many comics are made about this topic every year.  I'm looking for this one, specifically, because the character's face in the last two frames is funny.\n\nI don't have much more to offer in terms of details.  Any help would be appreciated!",
+            "subreddit": "comics",
+            "created_utc": 1599759548.0,
+            "permalink": "https://reddit.com/r/comics/comments/iq854k/request_fall_comic_from_last_year_or_so/",
+            "score": 1,
+            "url": "https://www.reddit.com/r/comics/comments/iq854k/request_fall_comic_from_last_year_or_so/"
+        },
+        {
+            "id": "hoo06r",
+            "title": "Aurora Serverless - Restore DB in-place?",
+            "selftext": "Greetings r/aws!\n\nI'm currently working on a project where we're trying to build a suitable database migration process for our serverless application.  We've decided to go with something [similar to this](https://aws.amazon.com/blogs/database/building-a-cross-account-continuous-delivery-pipeline-for-database-migrations/), where we're using CodeBuild to run migrations against our Aurora Serverless PostgreSQL database via Flyway.  This works pretty well, but I'm having a hard time figuring out a good backup and/or rollback solution, and was hoping ya'll might have some pointers.\n\nSpecifically, we're trying to move away from scripted rollbacks (i.e., writing the \"up\" and \"down\" migration) and, instead, would like to rely on DB snapshots.  This comes from (a) having to rarely use rollbacks (so it's a fair amount of dev time that potentially never sees use), (b) rollbacks being prone to failure anyways (which can cause even bigger issues), and (c) point-in-time restorations being robust.  There are of course drawbacks, but basically we run migrations infrequently enough and after decent testing that we'd rather treat rolling back as a last resort rather than a part of the process.\n\nWhich leads to our current issue: there doesn't seem to be a way to roll an Aurora Serverless DB back in-place.  That is, whether we create a snapshot or rely on the \"Restore to point in time\" feature, we're always required to create a new DB rather than to update the existing database.  It would seem, if this is the route we wanted to pursue, rolling back a database would require us to essentially spin up a copy of the database then point the application to the new database.  This isn't infeasible, but seems a bit \"clunky\" in terms of having to mitigate issues in production or something.\n\nCan anyone confirm that this is the case?  And does anyone have any tips on how to handle such a process in this setting?  We're convinced, and it seems like many others are to, that writing the \"down\" scripts for our migrations is simply not worth it (although I'd be willing to reconsider if there's a good argument), to the extent that I'd rather setup the infrastructure to handle rolling back using the \"cloned\" DB approach if needed.\n\nIf this is the only way of doing this, does anyone have any pointers as to a best approach?  My idea would be, at that point, that our CodeBuild project would create a copy of the database first, apply the migration, then we'd switch the DB the application is pointing to once we've confirmed the DB wasn't borked.  This seems like the most robust approach, but it starts to lead into questions of Blue-Green deployments that we're not prepared to address at the time (but that we might have to, if needed).\n\nAny other thoughts or suggestions are welcome!",
+            "subreddit": "aws",
+            "created_utc": 1594383865.0,
+            "permalink": "https://reddit.com/r/aws/comments/hoo06r/aurora_serverless_restore_db_inplace/",
+            "score": 2,
+            "url": "https://www.reddit.com/r/aws/comments/hoo06r/aurora_serverless_restore_db_inplace/"
+        },
+        {
+            "id": "hjegm8",
+            "title": "SciPy - Dimensionality of FFT used in Welch function",
+            "selftext": "Greetings [r/Python](https://www.reddit.com/r/Python/)!\n\nHopefully this is an appropriate place to ask this ( [r/scipy](https://www.reddit.com/r/scipy/) doesn't look very active), but I had a quick question regarding the [scipy.signal.welch](https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.welch.html) function. I've been tasked with experimenting using this function, and I need to figure out if it utilized a 2D FFT when 2D data is passed. It's been a while since I've worked directly with Fourier Transforms, and unfortunately the source code is hard to decipher, so I'm hoping someone knows the answer off the top of their head (and provide some sort of justification) so that I can move on without spending much time on this issue.\n\nI think it does, since the shape of the input affects the shape of the output data (i.e., passing in 1D data returns 1D data, passing in 2D data returns 2D data). However, I'm not even sure what this process is doing nor what it's even returning (aside from what the docs say), so I need something I little more explicit to tell my professor when he inevitably grills me on this.\n\nFor a bit more context: I'm trying to reproduce the processing of some previous work in which they calculate the power spectral density of gray-scale images in order to calculate a similarity between the images. So the expectation is that we use 2D FFT (versus reshaping the image to 1D and using 1D FFT) so as to capture spatial features of the image. I'm not in signal processing or anything, so it'd be very useful to be able to use this function without having to dig in much deeper, but I'm also open to any other suggestions or direction.",
+            "subreddit": "Python",
+            "created_utc": 1593623578.0,
+            "permalink": "https://reddit.com/r/Python/comments/hjegm8/scipy_dimensionality_of_fft_used_in_welch_function/",
+            "score": 3,
+            "url": "https://www.reddit.com/r/Python/comments/hjegm8/scipy_dimensionality_of_fft_used_in_welch_function/"
+        },
+        {
+            "id": "hjea5j",
+            "title": "SciPy - Dimensionality of FFT used in Welch function",
+            "selftext": "[removed]",
+            "subreddit": "Python",
+            "created_utc": 1593623015.0,
+            "permalink": "https://reddit.com/r/Python/comments/hjea5j/scipy_dimensionality_of_fft_used_in_welch_function/",
+            "score": 1,
+            "url": "https://www.reddit.com/r/Python/comments/hjea5j/scipy_dimensionality_of_fft_used_in_welch_function/"
+        },
+        {
+            "id": "gpvrg4",
+            "title": "Thoughts on the Installment Collar and a simple strategy incorporating it?",
+            "selftext": "The [Installment Collar](https://www.cboe.com/blogs/options-hub/2015/07/30/options-strategy-the-installment-collar) (which might also be called a Calendar or Diagonal Collar?) basically has one buy long term puts and selling short term calls on owned shares.\n\nThere a plenty of variations on this strategy, and it's quite flexible in terms of risk/reward management.  I've been testing some approaches, given certain constraints, that seems to provide decent returns for minimal risk and effort.\n\nCurrently, my plan is to buy 100 shares of SPY, buy an ATM PUT that expires in \\~2 months (say, July 17th), and sell weekly/bi-weekly ATM CALLs.  The choice of selling ATM PUTs/CALLs is inefficient, but \"effortless\" in the since that you'll know your total risk upfront (i.e., the cost of the PUT) and you'll know you're semi-weekly reward upfront (i.e., you know what you take home from the CALLs).  You profit when the premium you've collected from selling CALLs is greater than the cost of the PUT.\n\nThis strategy works well in the current market conditions as implied volatility it relatively high, making the difference between the cost of the PUT and the cumulative premium of the CALLs high.  This means that a potential risk would be that implied volatility decreases, causing the premium on the CALLs to decrease.  This is why the choice of buying a mid-term PUT (versus something longer out which would produce more profit) is incorporated here.\n\nThe choice of SPY is also important since (a) it has excellent volume and bi-weekly options, (b) it's less volatile than company stocks or most other ETFs with good options, and (c) it has decent dividends.  Again, this adds the the \"effortless\" aspect of this strategy, as it's a safe choice for investing in general, but obviously more active selections can increase such gains.\n\nAt the onset, we buy (or already own) shares of SPY, buy the PUT, and sell the CALL.  By the time the CALL expires, either the price increases, causing the CALL to be exercised and us losing the stock (or we can roll it up), or it stays the same/decreases, causing the CALL to expire worthless.\n\nIf the price stays the same/decreases and the CALL expires worthless, we can sell another CALL against it (and so on).  If the price decreases significantly, our losses from holding the stock is offset by the increase in value from PUT.  Here, we can sell the PUT (yielding back the difference), then buy another ATM PUT for the same (or possibly future, to roll forward) expiration.  The idea is to continuously keep our PUT near the price of the stock to limit downside risk.\n\nIf the price increases and the CALL is exercised/rolled up, we buy the stock again/continue holding it and continue to sell CALLs against it.  We can even roll the PUT up and back, at the cost of time value, to capture upward movements (as long as value gained offsets the time we lose to sell CALLs against it).\n\nBased on the numbers of I've been working with, this would produce a decent profit (conservatively +1% per month) if nothing drastic occurs in the market.  However, the real value of this strategy is that it caps loss, which allows us to leverage margin efficiently.  Since we can be highly leveraged, the premium and dividends we receive are that much more valuable without risk of a margin call.\n\nThis also means that sudden decreases in prices aren't felt by our strategy (of course, neither are increases).  Although I'm bullish, I wouldn't be surprised if another crash occurs in the near future.  This strategy mitigates this risk entirely, since the value of our PUT will cover *any* loss in value from our stock.\n\nThe lack of upside potential is probably a turn off for many people, since selling ATM CALLs basically guarantees no upside potential beyond the premium of the CALLs we sell.  Of course, I'd say this is *the* price to pay for such consistent income.\n\nIt seems the true risk, as I mentioned earlier, can come from a decrease in implied volatility.  However, volatility doesn't tend to sharply decrease (only increase), making such events rather predictable.  This might make this strategy unfeasible in smoother markets (i.e., pre-COVID), but currently it looks ripe.\n\nI'm trying to spot flaws in my logic or other potential risks.  Obviously what I described here is quite low-level, inefficient, and naive, but my idea is to replace a simple \"buy and hold\" strategy with something a little more predictable (and that can be refined over time).\n\nThoughts on this?  I've tried finding similar strategies, but, other than the \"Installment Collar\" description, it doesn't seem too popular.  It's certainly not the most lucrative strategy, but it's safety is quite valuable to me given my circumstances and the current state of the market.",
+            "subreddit": "options",
+            "created_utc": 1590348674.0,
+            "permalink": "https://reddit.com/r/options/comments/gpvrg4/thoughts_on_the_installment_collar_and_a_simple/",
+            "score": 2,
+            "url": "https://www.reddit.com/r/options/comments/gpvrg4/thoughts_on_the_installment_collar_and_a_simple/"
+        },
+        {
+            "id": "g2h1j9",
+            "title": "Probabilities and Interpreting Distributions",
+            "selftext": "Greetings r/MLQuestions,\n\nI know my way around the mechanics of probabilities, at least in the context of ML, but I lack the intuition for them and how to interpret them, especially in the setting of ML.  I'm hoping to gain some other perspectives on the subject and to get some direction as to how I can learn more about it.\n\nSpecifically, I'm currently tasked with analyzing images and determining similarity between them based on high-level semantic features.  This brought me to [\"A Metric for Distributions with Applications to Image Databases\"](https://users.cs.duke.edu/~tomasi/papers/rubner/rubnerIccv98.pdf) and the Earth Mover's Distance, which seems like a spot-on place to start.  I'm aware of EMD through WGANs, but have really only looked at it in contrast to measures like KL divergence.  I get the intuition for EMD (I think) and have been able to implement it with expected results, but I can't quite mend the gap in my thoughts between the quantities we observe and use in the context of ML versus probability distributions.\n\nAs an example: with my set of black-and-white images, I can perform image segmentation to extract groups of pixels with similar colors.  Any given image can have anywhere between 1 and *k* of these components.  We could do something like calculate some statistic for these components (e.g., ratio of black to white pixels in it's bounding box), so that a given image corresponds to a basket of *n* such measures (where *n* is between 1 and *k*).\n\nIn other words, I'd say that each of these images correspond to a distribution of such values, and ranking their similarity via EMD produces the results I expect (even with this poor approach).  This makes sense to me, since we expect similar images to have similar features so that the distributions we construct will look similar for similar images, etc.\n\nNow, assuming I didn't get any of that wrong, I don't see how \"probability\" plays into this.  My guess is that, if we normalize the distributions I've created, we end up with \"probability distributions,\" at least mechanically.  However, I don't quite see how probability plays into this.  I suppose I'd interpret the distributions we've constructed as being samples from different distributions which we imagine being what has \"generated\" these images, but is this accurate?\n\nI guess I feel like I almost get the whole picture, but can't quite convince myself that what I'm looking at are probability distributions when no consideration of probabilities were used to actually construct them.  I'm worried that I'm incorrectly assuming that these do correspond to some actual probability distribution (or some notion of it), which will obviously make further progress difficult.\n\nThoughts?  Comments?  I can't quite ask any specific question cause I'm not even sure what the question is, but I'm hoping that perhaps others have felt the same way and were able to convince themselves of such connections in a way that I just haven't seen yet.  Thanks!\n\nEdit: I forgot only tutorials on how to build neural networks from scratch get upvotes in r/MLQuestions \u00af\\\\\\_(\u30c4)\\_/\u00af",
+            "subreddit": "MLQuestions",
+            "created_utc": 1587050902.0,
+            "permalink": "https://reddit.com/r/MLQuestions/comments/g2h1j9/probabilities_and_interpreting_distributions/",
+            "score": 1,
+            "url": "https://www.reddit.com/r/MLQuestions/comments/g2h1j9/probabilities_and_interpreting_distributions/"
+        },
+        {
+            "id": "esbnaw",
+            "title": "TensorFlow vs PyTorch: Can anyone settle this?",
+            "selftext": "First off, I am in the TensorFlow camp.  Specifically, I've been using Keras since Theano was a thing, so after it became clear that Theano wasn't gonna make it, the choice to switch to TensorFlow was natural.  Before TF v2, I would have concurred that PyTorch wins in general usability.  However, between Keras and the features of TF v2, I've had no difficulty with TensorFlow and, aside from some frustrations with the way the API is handled and documented, I'd assume it's as good as it gets.\n\nYet, I see time and time again people advocating for PyTorch over TensorFlow (especially on this sub).  To the point that someone asking a question about TensorFlow will receive multiple responses from people suggesting they switch.  Now, I've yet to read a *good* argument to switch, and, frankly, I can't imagine hearing an argument that would convince me to switch.  But these suggestions do seem to generally be given in good faith, and I'd be foolish to ignore such advice.  So, can anyone make a good argument advocating for either library?\n\nFor context, I've used PyTorch a number of times, and it seems fine.  Certainly easy to use, but not much easier than Keras and/or TFv2 (in my opinion).  I focus on reinforcement learning, so that might make a difference too.  I'm often having to write custom training loops and loss functions, but I'd guess that both are \"easily\" doable with either library.  I don't rely on dedicated services (i.e., I avoid ML platforms) and prefer to avoid vendor lock-in (usually opting for a containerized approach).\n\nDoes anyone have any specific arguments or can point me to any articles/videos/etc. advocating for the use of one library over the other?  My guess is that, on some level, it's going to depend on use-case and various preferences, but considering how quick people are to suggest switching libraries in the face of almost any challenge, I'm assuming there's a general argument that can be made.  I'm also interested in any general discussion on this.  There always seem to be this weird contention surrounded this conversation, and I don't think that's appropriate.  I'll use whatever library makes the most sense to use, and I'd hope others are doing the same regardless of the internet's opinion.  So if this just comes down to matter of preferences, then I'd be content with that resolution. \n\nThanks!",
+            "subreddit": "MLQuestions",
+            "created_utc": 1579698321.0,
+            "permalink": "https://reddit.com/r/MLQuestions/comments/esbnaw/tensorflow_vs_pytorch_can_anyone_settle_this/",
+            "score": 15,
+            "url": "https://www.reddit.com/r/MLQuestions/comments/esbnaw/tensorflow_vs_pytorch_can_anyone_settle_this/"
+        },
+        {
+            "id": "eonpxg",
+            "title": "Questions Regarding Lazy Portfolio Allocations, Bond ETFs, and Options",
+            "selftext": "Greetings r/investing,\n\nAfter a fair amount of time of learning, saving, and some trading, I'm at the point where I'm looking to invest in a (relatively) lazy portfolio using cost dollar averaging.  Admittedly, I'm interested in more active trading, but due to being in a particularly busy time of my life, I know I won't have the time to do it properly.  Alas, the market doesn't wait for me, and I've reached my various personal finance goals to start looking at investing.\n\nMy plan is to start with something like a [lazy portfolio](https://www.bogleheads.org/wiki/Lazy_portfolios) comprised of ETFs which have active options and pay decent dividends.  Obviously, sound financials and a properly balanced portfolio is a higher portfolio, but my hope is to spend the next 3 to 5 years building this portfolio so that when I move to the next phase of my life (i.e., completing grad school), I'll be setup to start in on more active trading, namely relatively-conservative [income options strategies](https://www.reddit.com/r/options/comments/a36k4j/the_wheel_aka_triple_income_strategy_explained/).\n\nWith this in mind, I have a few question regarding my overall plan, my selection of ETFs (or other securities), and some other details I haven't been able to find specific answers for.  Any advice or comments would be appreciated.\n\nFirst, at least to start, I planned on having 50% of my portfolio comprised of bonds.  I'm definitely willing to adjust this, but I feel anything over 50% would be too conservative for my situation (I'm 25 with disposable income) and I'm not willing to go below 25% as per Benjamin Graham's advice.  On top of this, I can't find anything that suggests I *shouldn't* utilize a Bond ETF over buying bonds directly.  To me, a bond ETF would be much preferred due to the simplification alone, but I'm weary that I'm interpreting the role of bonds incorrectly here.  My current plan is to invest 50% of my capital into TLT, although I considered a 25/25 split between TLT and HYG.\n\nSecond, I'm aiming for 25% of my capital to focus on the US market.  To me, the easy choice is SPY.  I'd be interested in exploring specific avenues at a later date, but to start, SPY makes the most sense to me.\n\nThird, I'd put 25% into gold.  Specifically, GLD.  It lacks dividends, but I can't seem to find a good alternative given my criteria.  Alternatively, I'd put 12.5% into international markets (specifically EFA) and the other 12.5% into GLD.  I think this would be slightly more aggressive, but it would give me some more dividend yield.\n\nOverall, my strategy looks like a simplified [Permanent portfolio](https://www.bogleheads.org/wiki/Lazy_portfolios#Permanent_Portfolio).  I'd probably be investing once a month, which (at current prices) would cost me around $1,200 to keep balanced (e.g., 1xSPY + 4xTLT + 2xGLD).  This is currently yielding \\~1.5%, which I think is acceptable.\n\nI won't be able to actively trade options on any of this for a while, so by the time I have enough capital and time to do so, my portfolio will bound to be different.  Still, my goal is to study these ETFs and paper trade on them to see how such strategies may play out.\n\nAny thoughts?  I'm particularly interested in hearing what others think of the choices of ETFs I went with.  I'm sold on SPY, but I'm not very familiar with EFA and HYG, and I think, to start I'd, avoid them.  I'm somewhat familiar with TLT and GLD and their role in my portfolio is straight-forward, but I'm certainly willing to replace them if it makes sense to do so (although I'm going to be hesitant to buy bonds and gold directly).  Obviously as I go and do more research, I'd adjust, but I think this is a solid foundation, so I'm hoping others can either confirm this or shit on my plan.I just don't want to make this decision in a vacuum.  Thanks!\n\nEDIT: As I mentioned in [this comment](https://www.reddit.com/r/investing/comments/eonpxg/questions_regarding_lazy_portfolio_allocations/feea4td?utm_source=share&utm_medium=web2x), I'm simultaneously considering a slightly more complex portfolio, too, if anyone wants to weigh in.",
+            "subreddit": "investing",
+            "created_utc": 1579020172.0,
+            "permalink": "https://reddit.com/r/investing/comments/eonpxg/questions_regarding_lazy_portfolio_allocations/",
+            "score": 6,
+            "url": "https://www.reddit.com/r/investing/comments/eonpxg/questions_regarding_lazy_portfolio_allocations/"
+        },
+        {
+            "id": "eepvi6",
+            "title": "How to get started with CloudFormation (and AWS in general)?",
+            "selftext": "Greetings r/aws,\n\nI've been playing around with AWS and want to start developing serverless apps \"the right way.\"  From what I can tell, CloudFormation seems like the first steps to doing this.  I'm somewhat comfortable with the pieces of the puzzle (e.g., Lambda, DynamoDB, etc.), but I'm finding myself overwhelmed when trying to design a template in the CloudFormation template designer GUI.\n\nI can find the docs for each component (e.g., here's the docs for an [ApiGateway::Method](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-method.html)), so I can find what properties are available, what they mean, which are required, etc., but I can't seem to find any reference to higher-level stuff, such as what components go into making a REST API, etc.\n\nObviously, at some level, these will boil down to design choices on my end.  Still, there are pieces of the puzzle that I think I'd miss without some sort of guide.  For example, I followed the \"[Build a Serverless Web Application](https://aws.amazon.com/getting-started/projects/build-serverless-web-app-lambda-apigateway-s3-dynamodb-cognito/)\" guide where they offer  a CloudFormation template to create the static site hosting portion of the guide.  This template involves a number of components that I wouldn't have considered (such as the BucketPolicy or the S3Objects).  I see that the Lambda function and it's role aren't necessary in general, but how would I have been aware of the components required to get this part running?\n\nIf it just comes down to learning how these services work individually, that's fine.  But I can't find any docs or reference material which explain these components in such a way that I can translate them to CloudFormation parameters.  I'd prefer to figure out CloudFormation from the bottom up (if that even makes sense), and I'm not expecting to spin up production grade sites overnight, but there seems to be *too much* material offered by Amazon and I don't even know where to start.\n\nAnyone have any advice or pointers for getting started?  I can deal with using external tools for the time being, but my goal is to be able to start a project from scratch without having to rely on anything not standard for AWS.  If the best approach is formal training or something along these lines, that's fine too (although finding such training is still challenging).  If this doesn't seem feasible or if it seems like the wrong approach, I'm happy to adjust, but overall the whole thing seems too complex and a lack of straight-forward reference material makes me question my own approach.",
+            "subreddit": "aws",
+            "created_utc": 1577132110.0,
+            "permalink": "https://reddit.com/r/aws/comments/eepvi6/how_to_get_started_with_cloudformation_and_aws_in/",
+            "score": 3,
+            "url": "https://www.reddit.com/r/aws/comments/eepvi6/how_to_get_started_with_cloudformation_and_aws_in/"
+        },
+        {
+            "id": "dopb9y",
+            "title": "Ring Case which lies flat?",
+            "selftext": "Does anyone have any recommendations for a Note 10 case which has an embedded ring (or possibly socket/kickstand/etc) which lies flat on it's back?\n\nEverything I've seen doesn't highlight this, and even my plain, \"flat\" Spigen case has a lip on the camera which makes it wobble when it's on its back. Normally this would be fine (albeit annoying), but it becomes pretty bad when trying to use the stylus. There are cases which do lay flat, but I'm specifically looking for a case with a ring (a kickstand may also work, but if I'm gonna add that kind of bulk I might as well get the grip, too). \n\nAny suggestions?",
+            "subreddit": "galaxynote10",
+            "created_utc": 1572353326.0,
+            "permalink": "https://reddit.com/r/galaxynote10/comments/dopb9y/ring_case_which_lies_flat/",
+            "score": 1,
+            "url": "https://www.reddit.com/r/galaxynote10/comments/dopb9y/ring_case_which_lies_flat/"
+        },
+        {
+            "id": "d92u1f",
+            "title": "Cooperative Game Theory in Reinforcement Learning",
+            "selftext": "Hey r/MLQuestions,\n\nI've been working on a project which is based on multi-agent reinforcement learning.  My professor tasked me with describing my approach through the lens of game theory.  I've, unfortunately, never studied game theory, but now is a better time than ever, I suppose.\n\nI've managed to pin down how I can frame my work as a cooperative game, but I have yet to understand why we'd do this in the first place.  Specifically, I don't see the connection between game theory and optimization problems (which is how I view RL tasks).  Through the papers I've been reading, I see how researchers setup a problem and deduce various game theoretic properties which, presumably, are nice, such as showing that the game has a non-empty core, but I don't understand what this means in the context of optimization.\n\nLike, let's say I properly model my cooperative game so that I can show it has a non-empty core.  This implies the grand coalition that is formed is stable, which means that, for my agents, they'll have no incentive to leave the grand coalition.  I can appreciate, at a high level, what this means for my solution.  But what does this give me, exactly?  Does this suggest that my approach has some quality which is useful in terms of the optimization problem (such as some form of convergence)?  Or is this weaker in that, for an optimization problem like this, a stable grand coalition is necessary for optimization to work (but doesn't guarantee the success of such a process)?\n\nMechanically, I think I'm grasping the notions of game theory enough to work with it in this context, but I feel I'm missing the overall point.  In the papers I've read, it seems like they spend a fair amount of time proving these game theoretic qualities of their problem, then they move on to the optimization task and the game theory is never \"used\" again.\n\nCan someone shed some light on this?  I'm really just looking for more intuitive explanations as to how game theory can be applied in this setting, but any advice or recommendations would be appreciated.  If it helps, one of the main papers I'm [referring to is here](https://arxiv.org/pdf/1904.00820.pdf), but I wouldn't get hung up on the details of this particular paper since it only resembles my work loosely.  Also, if anyone can suggest a better place to ask this question, I'd appreciate it to.  Thanks!",
+            "subreddit": "MLQuestions",
+            "created_utc": 1569415863.0,
+            "permalink": "https://reddit.com/r/MLQuestions/comments/d92u1f/cooperative_game_theory_in_reinforcement_learning/",
+            "score": 9,
+            "url": "https://www.reddit.com/r/MLQuestions/comments/d92u1f/cooperative_game_theory_in_reinforcement_learning/"
+        },
+        {
+            "id": "d6ybwu",
+            "title": "Anyone know Game Theory?",
+            "selftext": "I'm a grad student in the CSE department, and I was recently tasked with incorporating elements of game theory into a paper I'm working on. I haven't taken a game theory course, and I only know the basics (but I'm trying to quickly get up to speed).\n\nAlthough it's not critical, I think I'd gain a lot by having an in-person chat with someone who considers themselves experienced and comfortable in the subject. I know the math department and the economics department both offer courses on game theory, and other departments/courses frequently incorporate it, but I'm not exactly sure how to find someone willing to casually chat about it. \n\nI don't want to contact any professors at this point, since I don't even know what questions to ask. My goal is to get a grip on the subject from a broad perspective before delving deeper into the specifics (at which point I'll be able to prepare material for a formal meeting with a professor). \n\nIs anyone or does anyone know someone who may be willing to help? I'm not really concerned with their background (degree, field, etc.) as long as they've had some formal teachings in the subject. I'd be willing to pay someone as a tutoring session, assuming the person is up-to-par. Ideally we'd meet sometime during the week on North Campus.\n\nAny leads or advice is appreciated!",
+            "subreddit": "UBreddit",
+            "created_utc": 1569001019.0,
+            "permalink": "https://reddit.com/r/UBreddit/comments/d6ybwu/anyone_know_game_theory/",
+            "score": 10,
+            "url": "https://www.reddit.com/r/UBreddit/comments/d6ybwu/anyone_know_game_theory/"
+        },
+        {
+            "id": "d5g2g2",
+            "title": "Keyboard Cases (and other interesting utility cases)",
+            "selftext": "[removed]",
+            "subreddit": "galaxys10",
+            "created_utc": 1568722268.0,
+            "permalink": "https://reddit.com/r/galaxys10/comments/d5g2g2/keyboard_cases_and_other_interesting_utility_cases/",
+            "score": 1,
+            "url": "https://www.reddit.com/r/galaxys10/comments/d5g2g2/keyboard_cases_and_other_interesting_utility_cases/"
+        },
+        {
+            "id": "d0mrcr",
+            "title": "me_irl",
+            "selftext": "",
+            "subreddit": "me_irl",
+            "created_utc": 1567804686.0,
+            "permalink": "https://reddit.com/r/me_irl/comments/d0mrcr/me_irl/",
+            "score": 6,
+            "url": "https://imgur.com/CUdM4LN"
+        },
+        {
+            "id": "cwcpbr",
+            "title": "1 vs 3 Seminar Credits?",
+            "selftext": "One of my classes this semester is a seminar which is offered for 1 - 3 credits.  I don't remember ever selecting \"1\" or \"3\" specifically, but I intended to take it for 3.  I just happened to see that HUB says I'm taking it for 1 credit, though.  The professor's syllabus states that he is offering it for 1 or 3 credits, so I'm trying to figure out if I fucked something up and what I need to do to take 3.  I'm also concerned that this might have goofed up my loans (things looked in order, but I didn't check too closely), but I guess I'll deal with this when the time comes.  Anyone have experience with this?",
+            "subreddit": "UBreddit",
+            "created_utc": 1566949759.0,
+            "permalink": "https://reddit.com/r/UBreddit/comments/cwcpbr/1_vs_3_seminar_credits/",
+            "score": 1,
+            "url": "https://www.reddit.com/r/UBreddit/comments/cwcpbr/1_vs_3_seminar_credits/"
+        },
+        {
+            "id": "cji2qe",
+            "title": "Recommendations for a brief history of the US economy since 2000?",
+            "selftext": "Hey r/AskEconomics,\n\nI'm don't have much of a background in economics, but I wanted to get a basic grasp of the various indicators and metrics that are often used to describe the US economy, and I figured just examining modern economic history in the US would be a good way to do that.  I use 2000 as an example, but really any time frame that includes the better half of the 2000 to present would probably work fine, too.  I'm particularly interested in the economy surrounding the 2008 financial crisis, so I figured starting around the early 2000s recession would be suitable to give me a relatively complete picture.  At this point, I just want to be able to read through and follow along in a thread like [this](https://www.reddit.com/r/Economics/comments/cc8hyl/us_budget_deficit_jumps_231_over_last_year_as/) or [this](https://www.reddit.com/r/Economics/comments/ceuesl/house_passes_bill_to_hike_the_federal_minimum/), so I'm not too interested in the actual theory of it all, just vocabulary and context.  I don't know if it helps, but I have a degree in math and am pretty familiar with investing so I'm familiar with some concepts.\n\nIf someone can recommend a book or blog or podcast or YouTube series or really anything, I'd be grateful.  I'm not sure how to search for something like this in reddit, but if there's already threads about this, I'd be interested in finding them.  Any other suggestions or advice would be awesome too.  Thanks!",
+            "subreddit": "AskEconomics",
+            "created_utc": 1564437228.0,
+            "permalink": "https://reddit.com/r/AskEconomics/comments/cji2qe/recommendations_for_a_brief_history_of_the_us/",
+            "score": 26,
+            "url": "https://www.reddit.com/r/AskEconomics/comments/cji2qe/recommendations_for_a_brief_history_of_the_us/"
+        },
+        {
+            "id": "buga8x",
+            "title": "Anyone have access to Neuro-Dynamic Programming (1996) by Bertsekas and Tsitsiklis?",
+            "selftext": "This is a pretty specific question, but I've been reading through [this paper](https://papers.nips.cc/paper/1713-policy-gradient-methods-for-reinforcement-learning-with-function-approximation.pdf) on policy gradient methods, and at the end of the very last proof before the acknowledgements, the authors refer to Proposition 3.5 from page 96 of Bertsekas and Tsitsiklis (1996) in order to prove convergence.\n\nIt's clear what the conditions are and how they prove it, but I feel incomplete for not reading that proposition in it's entirety.  It's currently out at my library, and I can't find an online copy of the book.  I'm not trying to pay $50 for a single proposition, either.  Does anyone have access to it or could point me in the right direction to it?  I'd literally be happy with a camera-taken photo of the proposition.  Thanks!",
+            "subreddit": "MLQuestions",
+            "created_utc": 1559144811.0,
+            "permalink": "https://reddit.com/r/MLQuestions/comments/buga8x/anyone_have_access_to_neurodynamic_programming/",
+            "score": 3,
+            "url": "https://www.reddit.com/r/MLQuestions/comments/buga8x/anyone_have_access_to_neurodynamic_programming/"
+        },
+        {
+            "id": "bue1j0",
+            "title": "[Meme] Trent would be Disappoint",
+            "selftext": "",
+            "subreddit": "youtubehaiku",
+            "created_utc": 1559132863.0,
+            "permalink": "https://reddit.com/r/youtubehaiku/comments/bue1j0/meme_trent_would_be_disappoint/",
+            "score": 0,
+            "url": "https://youtu.be/8SnHCfl7nMk"
+        },
+        {
+            "id": "budv14",
+            "title": "Trent would be Disappoint",
+            "selftext": "",
+            "subreddit": "youtubehaiku",
+            "created_utc": 1559131742.0,
+            "permalink": "https://reddit.com/r/youtubehaiku/comments/budv14/trent_would_be_disappoint/",
+            "score": 1,
+            "url": "https://youtu.be/8SnHCfl7nMk"
+        },
+        {
+            "id": "b2z0oa",
+            "title": "Volume Fluctuation Issues (Galaxy S10)",
+            "selftext": "Greetings everyone,\n\nI've been noticing an issue since I first start using my S10 related to the volume of the device.  Whether I'm plugged into a my car via an AUX port, using wired ear buds, using generic Bluetooth earbuds, or even using my Samsung Buds, I'm noticing random spikes in my phone's media volume.\n\nI haven't been able to notice any specific patterns, but basically the volume will \"dip\" for a moment then come back up.  During these dips, I won't be receiving any notifications or activities from apps.  This occurs when my screen is off or on.  I think it can be sometimes brought on by unlocking the device, but it could be random.\n\nIt also seems that it's becoming more common, which is concerning.  I'm hoping there's some sort of audio equalization occurring that I could turn off, but I can't find anything on it.  I've never had this issue with my Pixel, so I don't think it's anything I'm doing in particular.\n\nThoughts?  It's pretty annoying, and is my only issue with my experience with the device so far.  Thanks!",
+            "subreddit": "galaxys10",
+            "created_utc": 1553010509.0,
+            "permalink": "https://reddit.com/r/galaxys10/comments/b2z0oa/volume_fluctuation_issues_galaxy_s10/",
+            "score": 6,
+            "url": "https://www.reddit.com/r/galaxys10/comments/b2z0oa/volume_fluctuation_issues_galaxy_s10/"
+        },
+        {
+            "id": "akogkb",
+            "title": "Join Us On Slack! https://ai-developers-global.slack.com",
+            "selftext": "This community is driven by the Slack channel, and, as such, don't expect to find my content here on the Subreddit.\n\n&#x200B;\n\n**https://ai-developers-global.slack.com**",
+            "subreddit": "a:t5_vj6tk",
+            "created_utc": 1548689259.0,
+            "permalink": "https://reddit.com/r/a:t5_vj6tk/comments/akogkb/join_us_on_slack_httpsaidevelopersglobalslackcom/",
+            "score": 1,
+            "url": "https://www.reddit.com/r/a:t5_vj6tk/comments/akogkb/join_us_on_slack_httpsaidevelopersglobalslackcom/"
+        },
+        {
+            "id": "ado4k6",
+            "title": "Upgradeable Deep Learning Rig Built Around Two Older GPUs",
+            "selftext": "Hey r/buildapc, I'm looking to build a budget deep learning rig around two older GPUs I have.  The plan would be to have the hardware I buy be compatible with top of the line GPUs (e.g., NVIDIA RTX 2080 Ti), or at least leave enough room for upgrades.\n\nI currently have a desktop dedicated to deep learning that I use on a daily basis as my \"main\" computer (I host JupyterHub on it and develop directly on the machine through it).  It has a NVIDIA GeForce GTX 650 1GB in it that I'm running Tensorflow on.  Obviously the GPU isn't very heavy duty, but it is able to work faster than the CPU for deep learning, so I use it to prototype then deploy it in AWS.  Those instances, of course, are too expensive for continuous use, and between the increase in development time that I spend on the machine as well as the next semester quickly approaching, I'd like to \"upgrade\" my equipment towards a feasible solution.\n\nFrom my current desktop, the only piece I want to keep is the NVIDIA GeForce GTX 650 1GB.  The rest of the machine will be a secondary server.  I also have a ZOTAC GeForce GTX 970 4GB and a Corsair CX500 power unit.  I'm not sure if the power unit will be sufficient for my needs, but if it can at least run the two GPUs, I'd like to incorporate it in this build (and upgrade later if need be).\n\nOtherwise, here's my plan for the rest of the build:\n\n[PCPartPicker part list](https://pcpartpicker.com/list/ws38q4) / [Price breakdown by merchant](https://pcpartpicker.com/list/ws38q4/by_merchant/)\n\nType|Item|Price\n:----|:----|:----\n**CPU** | [AMD - Threadripper 1900X 3.8 GHz 8-Core Processor](https://pcpartpicker.com/product/BvgPxr/amd-threadripper-1900x-38ghz-8-core-processor-yd190xa8aewof) | $319.99 @ Amazon \n**CPU Cooler** | [Corsair - H100i v2 70.69 CFM Liquid CPU Cooler](https://pcpartpicker.com/product/CrDzK8/corsair-cpu-cooler-cw9060025ww) | $129.89 @ OutletPC \n**Motherboard** | [Asus - PRIME X399-A EATX TR4 Motherboard](https://pcpartpicker.com/product/wMjWGX/asus-prime-x399-a-eatx-tr4-motherboard-prime-x399-a) | $299.97 @ B&H \n**Memory** | [Corsair - Vengeance LPX 16 GB (2 x 8 GB) DDR4-3000 Memory](https://pcpartpicker.com/product/MYH48d/corsair-memory-cmk16gx4m2b3000c15) | $119.99 @ Amazon \n**Storage** | [Samsung - 860 Evo 1 TB 2.5\" Solid State Drive](https://pcpartpicker.com/product/yzfhP6/samsung-860-evo-1tb-25-solid-state-drive-mz-76e1t0bam) | $147.00 @ Amazon \n**Case** | [Corsair - Air 540 ATX Mid Tower Case](https://pcpartpicker.com/product/RbFPxr/corsair-case-cc9011048ww) | $149.99 @ Amazon \n**Power Supply** | [EVGA - SuperNOVA G3 750 W 80+ Gold Certified Fully-Modular ATX Power Supply](https://pcpartpicker.com/product/dMM323/evga-supernova-g3-750w-80-gold-certified-fully-modular-atx-power-supply-220-g3-0750) | $89.89 @ OutletPC \n | *Prices include shipping, taxes, rebates, and discounts* |\n | Total (before mail-in rebates) | $1296.72\n | Mail-in rebates | -$40.00\n | **Total** | **$1256.72**\n | Generated by [PCPartPicker](https://pcpartpicker.com) 2019-01-07 18:56 EST-0500 |\n\nI have concerns with compatibility, though, and especially between the GPUs.  I would like to use both the GPUs I have now in the build, then, when I decide to upgrade a GPU, switch out the lesser of the two for it (and probably put it back in the older machine).  The build above should work with two ZOTAC GeForce GTX 970 4GB according to pcpartpicker.com (according to the site, the build can also support two GeForce RTX 2080 Ti).  But I can't find the 650 on the site, and I'm not sure if mix-matching the types of GPUs would cause any issues.  Does anyone know if that would cause an issue?  Or if this motherboard would support the 650?  Since I'm using it for deep learning, the GPUs would run for separate (but possibly parallel) training.\n\nThe motherboard/CPU combo is kind of a tricky spot, since I want to be able to upgrade the CPU up to the Threadripper 32-core, but I'm not in need of a high-powered CPU at the moment.  The CPU I chose is simply the cheapest that would fit the motherboard (same with the cooler).\n\nIdeally, I'd like to keep the build under $1,000 (and I'm in the US), but I'm willing to invest more if it will allow me to upgrade later.  If the extra $250 gets me that, then I'm fine with it (although I might try looking for cheaper parts elsewhere).  In terms of upgradeability, I'd like to slowly upgrade the above build to this build:\n\n[PCPartPicker part list](https://pcpartpicker.com/list/MpPzdX) / [Price breakdown by merchant](https://pcpartpicker.com/list/MpPzdX/by_merchant/)\n\nType|Item|Price\n:----|:----|:----\n**CPU** | [AMD - Threadripper 2990WX 3 GHz 32-Core Processor](https://pcpartpicker.com/product/zXNv6h/amd-threadripper-2990wx-3ghz-32-core-processor-yd299xazafwof) | $1699.99 @ Amazon \n**CPU Cooler** | [Corsair - H100i v2 70.69 CFM Liquid CPU Cooler](https://pcpartpicker.com/product/CrDzK8/corsair-cpu-cooler-cw9060025ww) | $129.89 @ OutletPC \n**Motherboard** | [Asus - PRIME X399-A EATX TR4 Motherboard](https://pcpartpicker.com/product/wMjWGX/asus-prime-x399-a-eatx-tr4-motherboard-prime-x399-a) | $299.97 @ B&H \n**Memory** | [Corsair - Vengeance LPX 128 GB (8 x 16 GB) DDR4-2400 Memory](https://pcpartpicker.com/product/LP38TW/corsair-memory-cmk128gx4m8a2400c14) | $979.99 @ Amazon \n**Storage** | [Samsung - 860 Evo 1 TB 2.5\" Solid State Drive](https://pcpartpicker.com/product/yzfhP6/samsung-860-evo-1tb-25-solid-state-drive-mz-76e1t0bam) | $147.00 @ Amazon \n**Storage** | [Samsung - 860 Evo 1 TB 2.5\" Solid State Drive](https://pcpartpicker.com/product/yzfhP6/samsung-860-evo-1tb-25-solid-state-drive-mz-76e1t0bam) | $147.00 @ Amazon \n**Video Card** | [Zotac - GeForce RTX 2080 Ti 11 GB GAMING AMP Video Card](https://pcpartpicker.com/product/9HL48d/zotac-geforce-rtx-2080-ti-11gb-gaming-amp-video-card-zt-t20810d-10p) (2-Way SLI) | $1299.99 @ B&H \n**Video Card** | [Zotac - GeForce RTX 2080 Ti 11 GB GAMING AMP Video Card](https://pcpartpicker.com/product/9HL48d/zotac-geforce-rtx-2080-ti-11gb-gaming-amp-video-card-zt-t20810d-10p) (2-Way SLI) | $1299.99 @ B&H \n**Case** | [Corsair - Air 540 ATX Mid Tower Case](https://pcpartpicker.com/product/RbFPxr/corsair-case-cc9011048ww) | $149.99 @ Amazon \n**Power Supply** | [Corsair - 1000 W 80+ Platinum Certified Fully-Modular ATX Power Supply](https://pcpartpicker.com/product/TRfp99/corsair-power-supply-cp9020074) | $185.55 @ OutletPC \n | *Prices include shipping, taxes, rebates, and discounts* |\n | Total (before mail-in rebates) | $6389.36\n | Mail-in rebates | -$50.00\n | **Total** | **$6339.36**\n | Generated by [PCPartPicker](https://pcpartpicker.com) 2019-01-07 18:51 EST-0500 |\n\nObviously things might change over time, but if I can keep putting money into this machine, it wouldn't be money wasted.  Let me know what you all think, if I missed anything, or if you have any suggestions for deep learning rigs.  Also, does anyone know how to properly insure a machine like this?  I'd probably opt for as many warranties as I can get, but if something were to happen to it (electrical issue, fire, etc.), would my renters insurance cover it?",
+            "subreddit": "buildapc",
+            "created_utc": 1546906164.0,
+            "permalink": "https://reddit.com/r/buildapc/comments/ado4k6/upgradeable_deep_learning_rig_built_around_two/",
+            "score": 2,
+            "url": "https://www.reddit.com/r/buildapc/comments/ado4k6/upgradeable_deep_learning_rig_built_around_two/"
+        },
+        {
+            "id": "a2wd2z",
+            "title": "NVIDIA Extends PhysX for High-Fidelity Simulations, Goes Open Source",
+            "selftext": "https://blogs.nvidia.com/blog/2018/12/03/physx-high-fidelity-open-source/\n\nHas anybody seen this? If so, how do you feel about the RL capabilities of such software? I'm not familiar enough with physics engines to know, but I've used Mujoco in RL projects, and I hate having to used closed source software for something so experiment driven. Could this offer an alternative? Or is this not suitable for such simulations?\n\nI'm also curious about the GPU acceleration. Many RL algorithms, such as PPO, can be bottle necked at the environment simulation. Does this do something that libraries such as Mujoco doesn't? Or are we not going to see any actual increase in efficiency of simulating?",
+            "subreddit": "deeplearning",
+            "created_utc": 1543892133.0,
+            "permalink": "https://reddit.com/r/deeplearning/comments/a2wd2z/nvidia_extends_physx_for_highfidelity_simulations/",
+            "score": 6,
+            "url": "https://www.reddit.com/r/deeplearning/comments/a2wd2z/nvidia_extends_physx_for_highfidelity_simulations/"
+        },
+        {
+            "id": "9tdnsl",
+            "title": "Stable Baselines and Humanoid-v2 Issues",
+            "selftext": "Hey everyone,\n\n&#x200B;\n\nI'm currently trying to test out the [Stable Baseline's](https://github.com/hill-a/stable-baselines/) implementation of PPO2, and I'm having difficulty getting the agent to learn the [Humanoid-v2 environment](https://gym.openai.com/envs/Humanoid-v2/).\n\n&#x200B;\n\nI'm able to successfully learn simple environments like CartPole-v1, so I think everything installed and runs correctly, and it seems to make a *little* progress, but the goal for the agent is to get the model to run, whereas mine can barely stand up for more than a couple of seconds.\n\n&#x200B;\n\nI'm running things with the default parameters presented in the repo (also used throughout the docs and mirrored in OpenAI's Baseline repo), so I'm wondering if either (a) this particular environment is tricky or (b) I have some other configuration that's preventing it from learning correctly.\n\n&#x200B;\n\nRight now, I'm only training one instance of the environment.  I train it for millions of steps (matching the number of steps seen in examples).  It learns a little bit quickly, but episode reward levels off abruptly and that's it.\n\n&#x200B;\n\nJust wondering if anyone has any insight into this.",
+            "subreddit": "MLQuestions",
+            "created_utc": 1541107414.0,
+            "permalink": "https://reddit.com/r/MLQuestions/comments/9tdnsl/stable_baselines_and_humanoidv2_issues/",
+            "score": 3,
+            "url": "https://www.reddit.com/r/MLQuestions/comments/9tdnsl/stable_baselines_and_humanoidv2_issues/"
+        },
+        {
+            "id": "9nofgi",
+            "title": "Understanding Continuous Action Spaces with Actor-Critic methods (PPO)",
+            "selftext": "Without worrying about the details, can someone explain how an algorithm like PPO handles continuous action spaces?\n\nIt's my understanding that the output of the policy network is the probability of selecting an action given a specific state, e.g, [ 0.25, 0.5, 0.1, 0.15] for 4 discrete actions. You'd then choose your action accordingly (is this right?).\n\nIf that's correct, then how does this handle continuous actions? Specifically, how does OpenAI's Baselines PPO2 handle it?\n\nIt's my understanding that it differs significantly from the discrete version, but I can't find any good resources that explains how it.\n\nAny details would be appreciated!",
+            "subreddit": "MLQuestions",
+            "created_utc": 1539380458.0,
+            "permalink": "https://reddit.com/r/MLQuestions/comments/9nofgi/understanding_continuous_action_spaces_with/",
+            "score": 3,
+            "url": "https://www.reddit.com/r/MLQuestions/comments/9nofgi/understanding_continuous_action_spaces_with/"
+        }
+    ],
+    "comments": [
+        {
+            "id": "n35datu",
+            "body": "Perhaps. I'd certainly suggest someone make a decision informed by data rather than the anecdotal evidence I'm offering (granted, I think I did a good job of qualifying my statements accordingly).\n\nI *would* question the specifics of these roles, though. Right now, an \"AI Engineer\" could be someone developing things like image recognition pipelines for robotics applications (which, in my head, is a \"real\" MLE position) or someone who is calling the OpenAI API and incorporating the responses on a website (which is hardly \"AI Engineering\" in the traditional sense, but would be a valid title for the role). And, of course, there's a lot more in-between.\n\nSo, at a minimum, it's probably important that the OP ignores the value of the title and focuses on the value of the experience and how that, in itself, will end up looking on a resume. If the OP is working with technologies and products which are in high-demand, regardless of their title, then *that* is the real factor.",
+            "subreddit": "ExperiencedDevs",
+            "created_utc": 1752527913.0,
+            "permalink": "https://reddit.com/r/ExperiencedDevs/comments/1lzxfaz/prioritize_career_or_quit_in_the_current_market/n35datu/",
+            "score": 5,
+            "parent_id": "t1_n35atui"
+        },
+        {
+            "id": "n3548if",
+            "body": ">I am going through some sort of midlife crisis\n\nIt should go without saying that you *shouldn't* make any significant life choices, like quitting a job (especially one that you think is valuable, etc.), during a midlife crisis. Doesn't mean you should just tough it out or whatever, but considering you're questioning thing in your life beyond just your job, it's safe to say that you should probably start elsewhere in terms of getting a grip on whatever it is you need to rectify before seriously contemplating leaving your job.\n\nWith that being said, I don't think ML engineers are in a particularly special place at the moment, so I don't think you'd be passing up on some once in a lifetime opportunity by moving back into being a SWE. Arguably, MLEs are the ones being the most neglected in this market, since the hot thing is doing things with existing AI solutions rather than building the solutions themselves, which suggests that a SWE who is able to incorporate things like LLMs into larger systems is more valuable than an MLE who can create ML solutions which don't necessarily interact with these systems. But I wouldn't put much weight into any of that to begin with.\n\nI'm not sure if I'd be looking at a long break at this point, though. Kind of seems like people are playing a game of musical chairs, and I'm not sure I'd want to be on the sidelines figuring things out when the music stops. If you were to, say, find a *different* career opportunity that you think would suit you better and you transitioned to that instead, then that's a different story. But I suppose if you can even consider taking any sort of break, then you might not be in a situation where doing so would be foolish.\n\nRegardless, I *do* think you're over worrying about what ML would mean for your resume, but maybe under worrying about what it would mean to take a year off from work. I think most people would agree that being dynamic and aggressive in your career is *generally* a good approach. Hopping jobs because you've found that you actually don't like the role you recently found yourself in isn't a bad thing. Taking a year off, though, seems a bit egregious.",
+            "subreddit": "ExperiencedDevs",
+            "created_utc": 1752525343.0,
+            "permalink": "https://reddit.com/r/ExperiencedDevs/comments/1lzxfaz/prioritize_career_or_quit_in_the_current_market/n3548if/",
+            "score": 22,
+            "parent_id": "t3_1lzxfaz"
+        },
+        {
+            "id": "n34rwa9",
+            "body": "If it matters, the later seasons aren't as good. I'm not sure how far you got so I'll avoid spoiling anything, but there's a hard transition that occurs and they leave behind much of the best parts of the show in favor of just kind of starting over.",
+            "subreddit": "unpopularopinion",
+            "created_utc": 1752521856.0,
+            "permalink": "https://reddit.com/r/unpopularopinion/comments/1lzsosy/everything_interesting_rick_morty_did_futurama/n34rwa9/",
+            "score": -1,
+            "parent_id": "t1_n346kmk"
+        },
+        {
+            "id": "n33tezf",
+            "body": ">/rant\n\nYou're breaking rule 9.\n\nPlease, we really don't need more people ranting about how much they hate AI in this sub. There's plenty of other subs on reddit where you can do that.",
+            "subreddit": "ExperiencedDevs",
+            "created_utc": 1752512207.0,
+            "permalink": "https://reddit.com/r/ExperiencedDevs/comments/1lzrjsl/genai_frustration/n33tezf/",
+            "score": 0,
+            "parent_id": "t3_1lzrjsl"
+        },
+        {
+            "id": "n332qbr",
+            "body": "First, we already do this. Anything in production has this in some shape or form. It's not a particularly hard feature to implement compared to the actual robotics.\n\nSecond, you're going to have a hard time integrating this in a scalable way given that different robots operate in different ways. We have various robotics systems which operate in various ways, so none of them operate (or *could* even operate) in the same way. Between differences in tech stack, hardware, regulations, requirements, connectivity, etc., I couldn't imagine a one-size fits all solution which basically doesn't just turn into what already exists.\n\nI'm sure there *could* be a nice, scalable solution here that *may* provide value in some contexts, but I'd have a hard time imagining anything that would be worth pursuing outside of one's own satisfaction. Maybe if you provide some details as to what you might have in mind people would be able to provide better feedback, but as far as I can tell, this is already \"solved\" given how complex the rest of the work generally is in this context.",
+            "subreddit": "robotics",
+            "created_utc": 1752504640.0,
+            "permalink": "https://reddit.com/r/robotics/comments/1ly8gcv/would_you_use_a_black_box_for_robots_saves_last/n332qbr/",
+            "score": 1,
+            "parent_id": "t3_1ly8gcv"
+        },
+        {
+            "id": "n2m9rzf",
+            "body": "I'm not sure if there's a clear distinction, but \"RaaS\" sounds like a funny way of saying \"leasing a piece of equipment.\"\n\nIf it *is* effectively just a lease, then you should ask yourself why so many businesses already choose to lease equipment instead of buying. There's plenty of reasons to do so in various contexts, but it basically comes down to business decisions that are more meaningful to the finance department than anything else.\n\nFor example, if you only have $100k to spend and a robot costs $1m to buy but $10k a month to lease, then you don't really have much of a choice but to lease it, no? Even if you could afford to buy it, would that capital be put to better use elsewhere? Or: is that robot a good *investment*? If it is going to be obsolete in a year, why buy it and be burdened with a rapidly depreciating piece of equipment when you can just lease it?\n\n>Isnt the robotic arms getting cheaper and a commodity?\n\nIf they're getting cheaper, then you *definitely* don't want to buy one. If you expect a given robot arm to cost a fraction as much as it does now in the near future, then it would be a very foolish move to buy it.\n\nAnd these things aren't, nor will ever be, commodities. That's a pretty egregious misuse of the word.",
+            "subreddit": "robotics",
+            "created_utc": 1752267464.0,
+            "permalink": "https://reddit.com/r/robotics/comments/1ltrz9h/does_robotics_robot_arm_as_a_service_work_in/n2m9rzf/",
+            "score": 1,
+            "parent_id": "t3_1ltrz9h"
+        },
+        {
+            "id": "n2lnon9",
+            "body": "Although, one *would* expect GRRM to have learned from his past mistakes.\n\nI mean, if it ended up taking him a total of 11 years to release both AFFC and ADWD even though he expected it to only take 6 years, then maybe he *would* have already released TWOW already with the expectation that ADOS would have been released a year later, but decided against it to avoid the same mistake.\n\nI personally don't believe that and I think GRRM is simply too old and burnt out to continue writing (as he's pretty openly admitted) and these books simply won't be released. But I suppose it's not *too* absurd to believe GRRM has a big surprise for his readers lol.",
+            "subreddit": "freefolk",
+            "created_utc": 1752260894.0,
+            "permalink": "https://reddit.com/r/freefolk/comments/1lx9vxj/have_you_given_up_hope/n2lnon9/",
+            "score": 10,
+            "parent_id": "t1_n2kv1ej"
+        },
+        {
+            "id": "n2lkhcj",
+            "body": "First, I'll say that I *hate* when this kind of thing happens for the exact reasons you've mentioned.\n\n*But*, you *may* be misinterpreting what your boss is getting at. If you're learning something on your own, then yes: having somebody who probably only learned from Google try to teach you is inefficient and a waste of time. But, if you're learning how something works *within* the context of what you do at your company, then that's a different story. It's less \"this person can teach you about this topic\" and more \"this person can show you a very relevant, real-life example of this thing and you two can share that knowledge, etc.\"\n\nI'll add that your non-tech boss probably doesn't care about your personal enrichment and is more interested in leveraging these technical skills for the business, so it'd make sense that they'd try to build some sort of cohesion between you and the other person. It just might be the case that they don't really understand what that actually looks like on a technical level, so they phrase it in the best way they can.\n\nRegardless, I wouldn't not actively dismiss what your boss is suggesting. They likely don't care about it like that. You should probably just humor them to a minimal degree and send a message to your colleague saying something like, \"hey, I'm learning a bit about MagickMock, and the boss suggested I ask you about it. You have any tips?\" That way you can say you brought it up with them and learned something (even if you didn't), and, perhaps, you might end up actually learning something or gaining some insight you weren't expecting.",
+            "subreddit": "ExperiencedDevs",
+            "created_utc": 1752259956.0,
+            "permalink": "https://reddit.com/r/ExperiencedDevs/comments/1lxd3mp/do_i_sound_like_a_knob_if_i_dont_want_to_ask_team/n2lkhcj/",
+            "score": 6,
+            "parent_id": "t3_1lxd3mp"
+        },
+        {
+            "id": "n2kc5o1",
+            "body": ">My entire view here is that this is about a universal lie. He can\u2019t utter any falsehoods regardless of whether he personally believes them or not.\n\nThat's not really a \"lie\" then. It's a false fact. *I'd* say that he explicitly can't lie based on the wish:\n\n[\"I wish, for only one day, dad couldn't tell a lie.\"](https://youtu.be/6eSyqE36hyg?si=XAxWUVJvQKsubOxN&t=73)\n\nSo the curse is not that he couldn't utter universal falsehoods, just that he couldn't lie. By definition, a [lie is an assertion that is believed to be false](https://en.wikipedia.org/wiki/Lie). I think it's fair to assume that this is effectively what the kid wishes for, given the context of the movie. He doesn't care if his dad is wrong about stuff; he doesn't want his dad to lie to him.\n\nMore concretely, a lie *must* be an assertion and the person making the assertion *must* believe it to be false. That's it.\n\nFor example, if we're willing to assume the Earth is not flat in reality but that I actually believe it is flat, then I could say \"the Earth is flat\" and that wouldn't be a lie because I don't believe such an assertion to be false.\n\n>So he can use this power to say \u201cthere is no afterlife,\u201d and if he can verbally say it, it must be true. And he can randomly guess the origin of life with the various theories that about, etc, till he\u2019s able to actually utter it out loud.\n\nIf he believes there is no afterlife, then he'd be able to say this. It wouldn't be a lie. It may still be false.\n\nAll of this is arguing semantics and not particularly important, but the reason I'm ranting is that your belief about the functionality of the curse actually diminishes one of the most important aspects of the movie: this curse let's him know what he actually *believes*, which is something much more grounded and more impactful from an emotional perspective. This point is driven home when he blurts out \"I'm a bad father.\" He has an epiphany at this point because he realizes he actually believes he is a bad father, not just that he is a bad father objectively.\n\nI think the distinction is subtle, but important, because he is forced to contend with the fact that he, himself, believes he is a bad father which is clearly something he hadn't recognized before. You don't need to have a magical curse placed on you to see that you're a bad father; you \"just\" have to recognize it yourself. This level of introspection is a constant challenge we all face, but it's something one *can* do without magical interference.\n\nIt's hard to do and it's a constant challenge we all face, but if there's anything to take away from the movie, it's that we *all* should take a step back and ask if we're lying to ourselves about these important aspects of our own lives. Jim Carrey's character could have feasibly figured this out himself, but he was so good at lying, he was able to lie to himself about it.\n\nAdditionally, I think this curse being more \"mystic\" and based on \"universal\" lies takes away from this message in that it's less impactful for there to be some objective way of asserting that he's a bad father. It's hard to imagine how the universe would measure such a quality, and if the movie *did* work this way, it'd come off as a bit more arrogant and obtuse (i.e., the writers are telling you, the audience, what constitutes a bad father in the universal sense) rather than how it works in terms of one's belief (i.e., it's up to you, the audience, to understand if *you* believe *you're* a bad father or not), which, to me, offers a much more impactful message given how actionable the result actually is.",
+            "subreddit": "shittymoviedetails",
+            "created_utc": 1752247471.0,
+            "permalink": "https://reddit.com/r/shittymoviedetails/comments/1lx2kjj/in_liar_liar_1997_fletcher_reed_cannot_lie_for_a/n2kc5o1/",
+            "score": 1,
+            "parent_id": "t1_n2joccc"
+        },
+        {
+            "id": "n2ffnin",
+            "body": ">This can\u2019t be all because of inflation?\n\nI mean, it basically is. Obviously we're talking about something pretty complicated here, but at the end of the day, the Fed *needs* to manage inflation, otherwise things won't just get bad, but they'll become unmanageable. So it's not that things might end up costing more, but that things will spiral until the US (and possible world) economy completely fails. They're gonna try pretty hard to avoid that, and cooling the US economy is effectively how you do so.\n\n>I also hear interest rates are also way up and they are tightening the money.\n\n[Interest rates aren't particularly high](https://fred.stlouisfed.org/series/FEDFUNDS). They're lower than they were a year ago by a decent margin, and they're much lower than they have been in the past. They are relatively high compared to where they were during COVID, but that's because they dropped rates to near 0 during COVID to heat up the economy. In case you didn't hear, that caused inflation which a lot of people didn't like.\n\nIf it matters, the Fed was on pace to continue lowering interest rates, but paused doing so since there are inflationary policies being pushed by the current administration. Whether or not those policies are worth it is beyond the scope of this question, but the Fed is acting pretty logically by not continuing to lower rates when there are pretty strong external inflationary factors at play.",
+            "subreddit": "AskEconomics",
+            "created_utc": 1752179166.0,
+            "permalink": "https://reddit.com/r/AskEconomics/comments/1lwm9bz/why_are_they_trying_cool_the_us_economy_and_slow/n2ffnin/",
+            "score": 4,
+            "parent_id": "t3_1lwm9bz"
+        },
+        {
+            "id": "n2f70aq",
+            "body": "For a 40 year old guy with your own business you're pretty naive lol",
+            "subreddit": "AmIOverreacting",
+            "created_utc": 1752176679.0,
+            "permalink": "https://reddit.com/r/AmIOverreacting/comments/1lwfx8v/aio_friend_calls_after_20_years/n2f70aq/",
+            "score": 1,
+            "parent_id": "t3_1lwfx8v"
+        },
+        {
+            "id": "n2e5dz9",
+            "body": ">How to get **work** done with constant meetings and other noncoding **work**\n\nNoncoding work *is* work. You *are* getting work done when doing noncoding work, otherwise it wouldn't be noncoding *work*.\n\nMore concretely: you work at a company which needs more from its employees than just code. The stuff you do outside of coding is a necessary part of the job. The sooner you internalize that, the sooner you can use your time doing noncoding work more effectively.\n\nIn the same vein, be sure that your noncoding work is actually productive. It's easy to get in the habit of showing up to every little meeting that you get roped into, but if you're finding that you're not getting anything from them (or offering anything to them), then you need to excuse yourself from them. You're effectively acting as your own manager in this sense, and it's important part of your job as gain seniority. And, like u/slowd said, you can do this on a mechanical level by blocking out times of your day where you want to focus. Just be aware that if you completely avoid meetings, etc., then you won't be operating at the level that is expected of you as someone with more experience.\n\nAnd yes, it does get \"worse\" as you gain more experience, but, again, it's important to recognize that these meetings (and, in general, management) are *supposed* to be generating value. It's *your* job to ensure that *your* time is being used effectively. In that sense, if you do a good job managing yourself, then things won't get worse because what you'd be doing with your time will be more valuable.",
+            "subreddit": "ExperiencedDevs",
+            "created_utc": 1752166194.0,
+            "permalink": "https://reddit.com/r/ExperiencedDevs/comments/1lwhaal/how_to_get_work_done_with_constant_meetings_and/n2e5dz9/",
+            "score": 50,
+            "parent_id": "t3_1lwhaal"
+        },
+        {
+            "id": "n2e0enc",
+            "body": "I mean, you can see that the timer ends up going up to at least 3.88 then drops back down to 3.76 after the long press concludes. It accounts for the extra time it takes to actually disable it. And it of course makes sense to have some sort of feature like this to prevent accidentally turning it off.",
+            "subreddit": "CrappyDesign",
+            "created_utc": 1752164772.0,
+            "permalink": "https://reddit.com/r/CrappyDesign/comments/1lwdlbq/in_nothing_phone_3_you_have_to_long_press_to_stop/n2e0enc/",
+            "score": -1,
+            "parent_id": "t3_1lwdlbq"
+        },
+        {
+            "id": "n2d0fbe",
+            "body": "My policy is to (a) consider the hierarchy, (b) be cognizant of uniqueness, and (c) minimize length.\n\nSo, for example, if you have a web app named Scobble which is primarily deployed as a Kubernetes cluster in AWS (where multiple instances can exist in the same account), then it's imperative that you enforce uniqueness in high-level names (e.g., EKS clusters, RDS clusters, S3 buckets, etc.) to avoid naming conflicts while also making it clear what the purpose of those resources are (e.g., an S3 bucket dedicated to a Scobble deployment should probably have \"scobble\" somewhere in the name). Furthermore, the naming scheme, itself, should be consistent across the board, e.g., buckets named \"scobble-storage-<env name>\", etc.\n\n*Within* the app, there should (usually) be enough isolation and context that incorporating \"scobble\" or the environment name isn't needed. Like, within the Scobble app, it is redundant to have variable names like \"ScobbleDbConnectionString\" *if* there is only ever one DB connection string to deal with, so you'd be better of with just \"DbConnectionString\". I'd even go a step further to say that if there are no other connection strings to consider, then you should just call it \"ConnectionString\" (although a *little* forward thinking is warranted here). If there *are* multiple connection strings at play, they *should* all be related to Scobble anyways, so whatever prefix/suffix you use to identify them should be more specific.\n\nOf course, much of this is nebulous and will evolve over time. The main consideration, for me, is ensuring uniqueness when required and making sure I can list/sort/query/etc. resources in a sane way, which is why I'd use name schemes like \"scobble-<purpose>-<env>\" so that, when I list these resources, I can quickly see I have X scobble resources, of which there are Y different groups of resources based on purpose, and for each purpose, there are Z different envs, etc. But this may be a bigger consideration for cloud engineers than for other contexts, etc.",
+            "subreddit": "ExperiencedDevs",
+            "created_utc": 1752154446.0,
+            "permalink": "https://reddit.com/r/ExperiencedDevs/comments/1lw4wht/what_are_the_pros_and_cons_of_naming_namespaces/n2d0fbe/",
+            "score": 3,
+            "parent_id": "t3_1lw4wht"
+        },
+        {
+            "id": "n2ctyxj",
+            "body": "Yup.\n\nYou work for a business. A business seeks to maximize profits. Coding, in itself, doesn't do that. It's what you actually do with the code which does. As such, it's not hard to see how there is almost always a greater emphasis placed on the business aspects of your job rather than the technical aspects of your job.\n\nThis isn't universal however. Some roles at some companies will be entirely technically focused, but this will almost always be because the business aspects of the job will be almost entirely managed by someone else.",
+            "subreddit": "ExperiencedDevs",
+            "created_utc": 1752152324.0,
+            "permalink": "https://reddit.com/r/ExperiencedDevs/comments/1lwbfga/coding_feels_secondary_to_stakeholder_work/n2ctyxj/",
+            "score": 5,
+            "parent_id": "t3_1lwbfga"
+        },
+        {
+            "id": "n23ekae",
+            "body": "It's not hard to imagine a situation where the actual financial ramifications are less than the non-tangibal benefit someone can believe they would receive for being racist/sexist/etc.\n\n\nIf enough decision makers at a company believe that by _not_ acting racist/sexist/etc. they will erode future profits (e.g., they don't want to hire people of a different race, gender, etc., because they believe they are fundamentally inferior), then it would be most prudent for them, from a profit seeking perspective, to act that way.\n\n\nAs to how this company can exist assuming this approach is inefficient: it can be hard for competitors to step in even if the company is running less efficiently than it could be otherwise. They may be losing potential profit by acting this way, but if they're still happily profitable, they may not care to change it or believe changing it will make them more competitive. Having an edge, like diversity, doesn't necessarily make you the stronger competitor.",
+            "subreddit": "AskEconomics",
+            "created_utc": 1752023706.0,
+            "permalink": "https://reddit.com/r/AskEconomics/comments/1lucp9x/why_dont_businesses_that_enact_racistsexistetc/n23ekae/",
+            "score": 1,
+            "parent_id": "t3_1lucp9x"
+        },
+        {
+            "id": "n1ywasd",
+            "body": "I'm willing to bet 99% of Raspberry Pi owners are also Linux users, making that a bit redundant.",
+            "subreddit": "ProgrammerHumor",
+            "created_utc": 1751974813.0,
+            "permalink": "https://reddit.com/r/ProgrammerHumor/comments/1luigh9/wehaveastyle/n1ywasd/",
+            "score": 1,
+            "parent_id": "t3_1luigh9"
+        },
+        {
+            "id": "n15gzis",
+            "body": ">\"of course you can just do \" return '1' if a == True else '2' if a == False \"\n\n[That's bait.](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExaWkxcXJycXA2aHJpOHg5OGZtaDh3cmdxM29sbTVhMmltcWg2MG5tZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/K0AnEB2t2EM/giphy.gif)",
+            "subreddit": "Python",
+            "created_utc": 1751559976.0,
+            "permalink": "https://reddit.com/r/Python/comments/1lnlhwp/switching_to_python_from_c/n15gzis/",
+            "score": 1,
+            "parent_id": "t3_1lnlhwp"
+        },
+        {
+            "id": "n14l9kd",
+            "body": "Oh, but it has held up. As someone young enough to have missed its original run and who finds (early) Sunny to be some of the best comedy on TV, I can assure you that Seinfeld has held up very well.\n\nI *would* say it's not for everyone, but honestly, if you're a fan of Sunny, you're probably the right audience for it. Everyone I've met who said they hated Seinfeld then actually gave it a proper chance ended up loving it. Granted, that's like three people. But being three for three on something like that is pretty conclusive evidence for me.",
+            "subreddit": "IASIP",
+            "created_utc": 1751550839.0,
+            "permalink": "https://reddit.com/r/IASIP/comments/1lql5fu/glenn_howerton_on_why_he_wanted_to_quit_its/n14l9kd/",
+            "score": 4,
+            "parent_id": "t1_n13v44a"
+        },
+        {
+            "id": "n0znvuh",
+            "body": "I'm at a bit over 600 days in Italian. I basically can't understand spoken Italian except for a few words here or there. I *might* be able to utter something coherent if you give me enough time. I *can* read a bit of Italian if it isn't complex.\n\nBut, of course, my 600 days isn't the same as others. I'm on Unit 55 of 86 in Section 3 of 3. Not sure how that compares to others.\n\nAs far as it being good or bad: I think people really fail to understand the actual value of Duolingo. I've been loosely trying to learn Italian since I was in high-school over a decade ago, and I've basically made 0 progress until trying Duolingo. Even while using Duolingo, I've tried various books, apps, online courses, podcasts, etc., but none of them \"stuck.\"\n\nNow I feel pretty invested in learning Italian and I plan on taking some in-person courses when the new session at my local language school starts. I also got my fiancee into it, who had no particular interest in Italian, who has maintained basically the same streak as me (albeit, she's a bit further behind in terms of units). We can roughly communicate simple thoughts to one another in Italian.\n\nFor an added comparison, I took Spanish in school from 7th grade up through 10th grade (i.e., 4 semesters) and again in my Junior year of college (which was a 5 day-per-week class). I know Italian *way* better than I do Spanish (granted, I actually want to learn Italian).\n\nAll of that is to say: Duolingo isn't how you learn a new language, but it's a decent way to start learning a new language. It's easy to point to all sorts of better approaches and resources that technically teach new languages more effectively than Duolingo, but if you can't stick with them, then they're useless.",
+            "subreddit": "mildlyinfuriating",
+            "created_utc": 1751481905.0,
+            "permalink": "https://reddit.com/r/mildlyinfuriating/comments/1lpvid4/lost_my_763_days_of_duo_streak/n0znvuh/",
+            "score": 3,
+            "parent_id": "t1_n0zgicy"
+        },
+        {
+            "id": "n0z2uym",
+            "body": ">I thought it sounded weird at first too but of course that's because of bias.\n\nIt sounds weird because it doesn't rhyme well and the tempo feels forced. It *is* supposed to be a song, after all, so making it harder to internalize doesn't seem like an improvement.",
+            "subreddit": "unpopularopinion",
+            "created_utc": 1751475880.0,
+            "permalink": "https://reddit.com/r/unpopularopinion/comments/1lpv334/the_new_alphabet_song_is_dope/n0z2uym/",
+            "score": 1,
+            "parent_id": "t3_1lpv334"
+        },
+        {
+            "id": "n0x0ntb",
+            "body": "I can't even begin to explain how ignorant this is lol",
+            "subreddit": "EndTipping",
+            "created_utc": 1751450904.0,
+            "permalink": "https://reddit.com/r/EndTipping/comments/1loxv38/crazy_how_they_expect_to_be_paid_for_nothing/n0x0ntb/",
+            "score": 3,
+            "parent_id": "t1_n0vefgy"
+        },
+        {
+            "id": "n0tnewd",
+            "body": "I always like to chime into these discussions to point out that I opened a restaurant last year and I strongly advocated for no tipping in favor of just paying proper wages and the wait staff threatened to walk. We hadn't even gotten to the point of discussing what the actual pay would be. They *know* they'll make more than anything we could reasonably offer through tips.\n\nSo we accept tips. I don't like it, partly because I don't like tip culture, and partly because it makes it harder to properly control prices (I can't really price my food well if some customers expect a 20% mark-up, some 10%, and some none, etc.). But the wait staff, frankly, have all the leverage and they know it, so tips it is.\n\nTake that however you want, but in my experience (both as a tipped employee in the past and now as a restaurant owner), the proliferation of tipping comes from employees who *do* make more money through tips than they would otherwise.",
+            "subreddit": "EndTipping",
+            "created_utc": 1751401644.0,
+            "permalink": "https://reddit.com/r/EndTipping/comments/1loxv38/crazy_how_they_expect_to_be_paid_for_nothing/n0tnewd/",
+            "score": 7,
+            "parent_id": "t1_n0rwb0f"
+        },
+        {
+            "id": "n0t5m82",
+            "body": "Ok, but you're also breaking rule 9",
+            "subreddit": "ExperiencedDevs",
+            "created_utc": 1751396521.0,
+            "permalink": "https://reddit.com/r/ExperiencedDevs/comments/1lpa7u8/us_devs_are_in_fact_cooked/n0t5m82/",
+            "score": 16,
+            "parent_id": "t1_n0t5hfs"
+        },
+        {
+            "id": "n0n67pw",
+            "body": ">Is it unreasonable of me to think that a fairly large part of a manager's job is meant to be being involved with/aware of their team, such that they notice this sort of thing anyway?\n\nI mean, how would you be aware of this without referring to some sort of data? A manager *might* be able to \"feel\" the performance of a team member slipping or not being up-to-par, but even then, they will be implicitly referring to metrics like \"time it takes to complete this kind of task\" when determining this. When you couple that with a large team across large spans of time (and, not to mention, human bias), then you *don't* want a manager to *not* be using concrete data for this kind of analysis.\n\nThinking that a manager should be able to be aware of these kinds of dynamics without hard data is like thinking an engineer should be able to code without references. Like, sure, in theory, an engineer could probably whip things together without using Google. But in practice it'd be pretty unreasonable to prevent them from using those kinds of materials. Managers *are* just people, after all, so expecting them to not use data to solve problems is pretty unreasonable, too.\n\n>And, can't you just pull this out of a board using points and cycle time?\n\nThese are just different ways of tracking time, except not as direct. I'm not saying the approach described by the OP is optimal (or even good), or that using points or cycle time wouldn't end up working better. I'm just saying there *is* value to be derived from this kind of data, including \"raw\" time tracking.",
+            "subreddit": "ExperiencedDevs",
+            "created_utc": 1751316332.0,
+            "permalink": "https://reddit.com/r/ExperiencedDevs/comments/1loc5ym/why_are_we_required_to_track_our_working_times_in/n0n67pw/",
+            "score": 2,
+            "parent_id": "t1_n0n1yxa"
+        },
+        {
+            "id": "n0lv0sl",
+            "body": "I think you're not seeing the bigger picture. Here's an example:\n\nIf you're managing a team of 10 devs with similar tasks, experience, etc., and one of the 10 devs take, on average, twice as long as the rest of the devs to complete similar tasks, then that's clearly an indication of something anomalous that a manager would want to be aware of. Without this information, it'd be hard for a manager to ever have any awareness of this kind of dynamic. And note that this kind of inference can occur even when the data is messy like how you've described.\n\nThe devs themselves wouldn't really see this value directly. In fact, the other 9 devs won't even feel as though their time tracking data is even really being utilized. But, in aggregate, it does provide value for the team and, more specifically, the managers as a whole.\n\nOf course, it's also the case that collecting this kind of data is hard and actually effectively utilizing this data is even harder, so this isn't to say that everyone collecting time tracking data is doing it properly and making it worth the effort. But this is more an issue with specific managers, organizations, processes, etc., than it is with the process itself.\n\nThe other commenters pointing to more cynical reasoning seem to be assuming that *they're* the ones that are supposed to be seeing value from this data. Engineers certainly could utilize this data to do things like help estimate tickets, etc., but that's pretty tough to do for the reasons mentioned. However, it should go without saying that someone managing a sufficiently large team of people who perform work outside the scope of the management's expertise will need to rely on various metrics to understand how their team is actually performing. Even if the specific nominal value of time on a specific ticket, project, etc., isn't particularly meaningful, it's not hard to spot trends, anomalies, etc., through this kind of data and follow up as needed.",
+            "subreddit": "ExperiencedDevs",
+            "created_utc": 1751302826.0,
+            "permalink": "https://reddit.com/r/ExperiencedDevs/comments/1loc5ym/why_are_we_required_to_track_our_working_times_in/n0lv0sl/",
+            "score": 1,
+            "parent_id": "t3_1loc5ym"
+        },
+        {
+            "id": "n0l7g86",
+            "body": "What? It's linked to directly in the article: [https://the-agent-company.com/](https://the-agent-company.com/)",
+            "subreddit": "technology",
+            "created_utc": 1751296026.0,
+            "permalink": "https://reddit.com/r/technology/comments/1lntrgj/ai_agents_wrong_70_of_time_carnegie_mellon_study/n0l7g86/",
+            "score": 5,
+            "parent_id": "t1_n0khn50"
+        },
+        {
+            "id": "n0gk1i6",
+            "body": "[Tell your boss so they know to never let you provide estimations](https://en.wikipedia.org/wiki/Pareto_principle), then they can laugh and tell you to give them an update when you wrap up that last 20% which they're sure will take you no time.",
+            "subreddit": "programmingmemes",
+            "created_utc": 1751226636.0,
+            "permalink": "https://reddit.com/r/programmingmemes/comments/1lnfuua/what_todo/n0gk1i6/",
+            "score": 1,
+            "parent_id": "t3_1lnfuua"
+        },
+        {
+            "id": "n02eobf",
+            "body": "Lol a lot of these comments are making a ton of assumptions based on the very limited information the OP provided.\n\nI work with a guy who has a weird tick where he has to clear his throat regularly. It can sometimes come off as a rude way of interjecting (like the classic throat-clear, chin down eyes up, tapping on the watch kind of move), but really it's just a tick. I could see how someone would misinterpret that (I did when I first met him), especially if they were in a stressful situation like an interview with him.\n\nSo it could be a tick, it could be drugs, he could be tired, or he could just be rude. I wouldn't overthink it- mostly because, regardless of the reason, it's clearly odd behavior that you can't really account for or do anything about.",
+            "subreddit": "quant",
+            "created_utc": 1751032886.0,
+            "permalink": "https://reddit.com/r/quant/comments/1llpqsj/weird_interview_experience/n02eobf/",
+            "score": 7,
+            "parent_id": "t3_1llpqsj"
+        },
+        {
+            "id": "n026uw4",
+            "body": "Regardless of your feelings towards AI, can we not continue to ruin this sub with shitty low-effort posts about AI that are clearly breaking rule 9?",
+            "subreddit": "ExperiencedDevs",
+            "created_utc": 1751030398.0,
+            "permalink": "https://reddit.com/r/ExperiencedDevs/comments/1llqzs3/its_running_around_in_circles_for_hours_now_tell/n026uw4/",
+            "score": 12,
+            "parent_id": "t3_1llqzs3"
+        },
+        {
+            "id": "mzwtdyx",
+            "body": "You didn't share a single opinion.",
+            "subreddit": "unpopularopinion",
+            "created_utc": 1750956393.0,
+            "permalink": "https://reddit.com/r/unpopularopinion/comments/1ll0tjf/club_teams_are_destroying_youth_sports_for_kids/mzwtdyx/",
+            "score": 1,
+            "parent_id": "t3_1ll0tjf"
+        },
+        {
+            "id": "mzvmeol",
+            "body": ">It's known to be one of the less useful learning apps, nothing compared to Anki, rossetta Stone, etc.\n\nIt *is*, but only in a vacuum.\n\nThe thing about Anki, Rosetta Stone, etc., is that they're harder to keep up with. If you *can* stick with it, then they're better, but that doesn't matter if you lose interest after a month.\n\nDuolingo is as effortless as it can get. That comes at the cost of how effective it is. But the main benefit is that it creates momentum that you can build off of.",
+            "subreddit": "italianlearning",
+            "created_utc": 1750943860.0,
+            "permalink": "https://reddit.com/r/italianlearning/comments/1lknw65/finally_finished_the_duolingo_italian_course/mzvmeol/",
+            "score": 4,
+            "parent_id": "t1_mzuenqy"
+        },
+        {
+            "id": "mzvkloa",
+            "body": "I own a restaurant with servers. When we started it, I advocated we refuse tips and, instead, pay them a proper wage. The whole serving staff threatened to walk if we didn't accept tips. It was utterly non-negotiable, and I was actually impressed with how quickly a crew could \"unionize\" around a single point of contention. They knew there were plenty of restaurants they can go to where they can work for tips, so they had the leverage. So tips it is.\n\nEmployers don't receive a benefit from employing tipped a staff. Either the food is marked up to account for proper wages, in which case the increase in revenue goes towards payroll, or the food is \"discounted\" appropriately so that customers are willing to pay for it, knowing they'll also have to tip. I, the employer, never see any extra money regardless of the approach.\n\nI'm all for ending tip culture. But it starts with the servers, *not* the employers. Anybody who has ever worked with or as a tipped staff understands this. Hell, when I worked for tips, I recognized very quickly that I was making way more with tips then I would elsewhere, and that's before you consider how much you save by not declaring your cash tips to the IRS.",
+            "subreddit": "EndTipping",
+            "created_utc": 1750943253.0,
+            "permalink": "https://reddit.com/r/EndTipping/comments/1lkni40/truth/mzvkloa/",
+            "score": 6,
+            "parent_id": "t3_1lkni40"
+        },
+        {
+            "id": "mzp96uf",
+            "body": ">Would this solve a real pain point for you?\n\nNo. ChatGPT (or any of the other LLM services out there) already does this pretty well.\n\n>What AWS tasks do you avoid because they're too complex?\n\nIf something is complex enough to make me want to avoid it, I'm not trusting an LLM to do it for me. At best, I'll ask an LLM to set up the Terraform config for me and I'll use that as a starting point.\n\n>Would you trust an AI to provision your infrastructure?\n\nNope.\n\n>Biggest concern: security, reliability, or learning curve?\n\nScalability. Sure, quickly spinning up an EC2 instance for some quick work is probably something a tool like this can handle. But it's also something I can do easily. However, setting up anything non-trivial likely means it won't be static. So making a change to the infrastructure, troubleshooting issues, etc., will just become harder to deal with the less I understand about what is actually there.\n\nI hate to be a downer, but, as-is, it seems like you're solving a problem that very few people actually have. It's definitely not good for *anyone* to spin up infrastructure without knowing what they're spinning up. That problem is made much worse by not being able to audit, modify, etc., your infrastructure down the road. Tools like Terraform don't exist to make spinning up simple infrastructure easy; it makes managing non-trivial infrastructure possible. A tool like this can't replace that directly.\n\nWhat *would* make sense would be for this to use something like Terraform as an intermediate layer. That is, this generates the Terraform configuration for you, which you can then validate, modify, etc., then have this also handle executing that infrastructure configuration. Of course, that's when this basically resolves to just a dedicated AI agent tool, which is a hard sell when tools like ChatGPT, GitHub Copilot, etc., already exists.",
+            "subreddit": "aws",
+            "created_utc": 1750861032.0,
+            "permalink": "https://reddit.com/r/aws/comments/1ljo38u/built_an_ai_that_turns_plain_english_into_aws/mzp96uf/",
+            "score": 1,
+            "parent_id": "t3_1ljo38u"
+        },
+        {
+            "id": "mzl18ai",
+            "body": "Is this a joke? lol",
+            "subreddit": "ExperiencedDevs",
+            "created_utc": 1750799512.0,
+            "permalink": "https://reddit.com/r/ExperiencedDevs/comments/1ljmnu6/my_manager_is_asking_everybody_to_send_her_the/mzl18ai/",
+            "score": 3,
+            "parent_id": "t1_mzl0ggc"
+        },
+        {
+            "id": "mzj5z16",
+            "body": "I'm not advocating for these companies nor am I suggesting that consulting is generally or ever worth it. I'm just explaining that what they're selling doesn't match what the OP is describing.\n\nIn terms of the OP's argument: if you want an electrician, then yes, go hire an electrician. But if you're an executive at a company that operates around the world with thousands of employees and multiple types of operations, then you probably wouldn't know that you need an \"electrician,\" let alone why you need them, where you need them, how you hire them, etc. Figuring that stuff out is what consultant agencies are supposed to do.\n\nAgain, whether or not they ever actually do that effectively is another story.",
+            "subreddit": "ExplainTheJoke",
+            "created_utc": 1750780362.0,
+            "permalink": "https://reddit.com/r/ExplainTheJoke/comments/1lj8y0t/what_did_big_four_do/mzj5z16/",
+            "score": 3,
+            "parent_id": "t1_mzj3r75"
+        },
+        {
+            "id": "mzj26g5",
+            "body": "I mean, they *are* experienced in consulting, which *is* a skill in itself and it's the main skill set they're selling.\n\nThese companies serve huge clients with all sorts of complex dynamics that are impossible for individuals to effectively navigate. And that's precisely where their value proposition exists: if you want to implement *anything* at a sufficiently sized company, you may literally need another huge company whose expertise is getting things implemented at huge companies to actually get anything done. This is a pretty common dynamic in businesses that operate at scale.\n\nBesides, when the actual experts are needed, these companies will tell you that's the case and show you how to get those experts. The hard part is knowing when those experts are needed, what they should do, how to get them, etc. Understanding all of that is what consultants do.",
+            "subreddit": "ExplainTheJoke",
+            "created_utc": 1750779293.0,
+            "permalink": "https://reddit.com/r/ExplainTheJoke/comments/1lj8y0t/what_did_big_four_do/mzj26g5/",
+            "score": 3,
+            "parent_id": "t1_mzioyzs"
+        },
+        {
+            "id": "myhwd97",
+            "body": "[\"... if I watch anymore Kevin Bacon I might actually turn into Kevin Bacon...\"](https://www.youtube.com/watch?v=BP5QZNhGsF4)",
+            "subreddit": "pcmasterrace",
+            "created_utc": 1750272321.0,
+            "permalink": "https://reddit.com/r/pcmasterrace/comments/1lelcnk/video_game_legend_john_carmack_transformation/myhwd97/",
+            "score": 1,
+            "parent_id": "t3_1lelcnk"
+        },
+        {
+            "id": "myhm1e5",
+            "body": "Where is the minefield? It's like you set up some argument but never actually made it.\n\n>Dating in America is like a job interview.\n\nOk, how so? You never actually explain this.\n\n>I spoke with so many women and they seem to be attracted of the idea of \"where are you from\" and \"I see you have an accent.\" No Susan, I was born in Eastern Europe and I am a human being with hobbies and passions like you are. I am not \"an accent\".\n\nI mean, is this offensive? I don't get it. If you meet someone, and they talk to you and have an accent, are you supposed to ignore that? Are you *not* supposed to ask people where they're from?\n\nKind of sounds like these women are walking on a minefield when trying to date you lol\n\nLike, how long did any of these conversations last? Did they just mindlessly repeat \"I see you have an accent\" over and over again for an hour? Or was that a 3 second opener which they used in order to get *you* to talk about *yourself*. You know- to try to get you to open up about something important to you, like, maybe, where you're from? I'm sure if you didn't \"close yourself into a shell\" after the first minute of conversation they would have eventually asked you about your hobbies.\n\nIf it matters, Americans have a wide variety of accents, and it's pretty common for Americans to ask each other where they're from if they spot an accent different from the region. Hell, I moved from Buffalo to Pittsburgh and I not only get people spotting my accent (which is almost identical), but typically that is just a conversation piece which leads to asking where one is from, why they moved, what they like to do in the city, etc. You know, small talk, which can escalate to larger talk if both parties are interested in taking it there.",
+            "subreddit": "self",
+            "created_utc": 1750269403.0,
+            "permalink": "https://reddit.com/r/self/comments/1lejfpc/dating_american_women_as_an_eastern_european_is/myhm1e5/",
+            "score": 8,
+            "parent_id": "t3_1lejfpc"
+        },
+        {
+            "id": "myg47sp",
+            "body": "I think a good goal is to be able to deploy a basic serverless application quickly and completely. Something like:\n\n* Lambda for serving a REST API (using something like FastAPI)\n* DynamoDB or Aurora Serverless for your database\n* S3 for static assets (which should include a basic front-end that you can also whip up)\n* API Gateway for hosting the API\n* CloudFront for your CDN\n* ECR for hosting your application images\n* Secrets Manager for storing application secrets\n\nYou should be able to deploy/manage this infrastructure using only Terraform (i.e., no Click-Ops). This doesn't mean you can't use the console to understand what is happening, but you should only create/update resources through Terraform (or whatever infrastructure management tool you want to use).\n\nYou should be able to set up a repo in GitHub which contains your application. I'd recommend Python if you don't have a preference, but any sensible language would work. This application should be set up to be able to tested locally easily while also be able to be deployed to Lambda. You should set up GitHub actions to build your application into an image, push the image to ECR, then update the Lambda to use the new image.\n\nSimilarly, you should be able to build a basic front-end that interacts with your service. This doesn't need to be super sophisticated (front-end engineering is a bit beyond the scope of a cloud engineer), but you should be able to feasibly test your solutions in an end-to-end fashion. Again, any front-end approach works (even basic HTML/CSS/JS), but learning a bit of React or something can go a long way. This should exist in a repo (can be the same repo as the backend), and it should be built/deployed to S3 via GitHub Actions.\n\nYour application should be served entirely through CloudFront. The front-end should be served out of S3 through CloudFront and cached appropriately. The backend can live in the same CloudFront distribution and served out of API Gateway. The front-end should then be able to communicate with the backend this way.\n\nThe application should be able to do *something* with the database. Doesn't really matter what, as long as your application can properly connect to the database (probably using credentials fetched from Secrets Manager).\n\nIn the end, you should be able to push a change to the repo and the whole thing should deploy automatically.\n\nOnce you do this, do it again, and again, etc., adding in more services, complexity, etc., as you go. Make sure costs are under control, things scale, things are secure, etc. This process should become second nature to you. Bonus points for using an EC2 server to work out of. I prefer to use EC2 and connect to it via VSCode tunneling. Working out of an EC2 instance can help in a lot of different ways, but being able to do so, in itself, goes a long way.\n\nFrom there, you'd be a pretty valuable asset to a lot of organizations who aren't very familiar with the cloud.",
+            "subreddit": "aws",
+            "created_utc": 1750254142.0,
+            "permalink": "https://reddit.com/r/aws/comments/1ledz5o/i_want_to_be_a_cloud_engineer/myg47sp/",
+            "score": 1,
+            "parent_id": "t1_myg478t"
+        },
+        {
+            "id": "myg478t",
+            "body": "Build stuff in the cloud.\n\nYou should be comfortable with setting up an AWS account, making sure everything is secure (use IAM users, MFA, etc.), understanding billing, etc.\n\nYou should familiarize yourself with the major/common services: EC2, S3, RDS, Lambda, DynamoDB, ECS, etc. Odds are most of what you'd be doing will end up involving many of these services, so you should be able to spin things up, use them properly, and spin them down without issue.\n\nFrom there, it'd be a good idea to learn how to properly manage these resources using something like Terraform. Similarly, you should be able to set up deployments to these services (ideally using something like GitHub Actions).",
+            "subreddit": "aws",
+            "created_utc": 1750254137.0,
+            "permalink": "https://reddit.com/r/aws/comments/1ledz5o/i_want_to_be_a_cloud_engineer/myg478t/",
+            "score": 2,
+            "parent_id": "t3_1ledz5o"
+        },
+        {
+            "id": "mycjpl5",
+            "body": "I'm not sure if I'm understanding what you're getting at.\n\nYou're assuming S is finite. In order to assert\n\n>(n > k in S for all k)\n\nor\n\n>(n >= k in S for all k)\n\n... it *must* be the case that S is finite (assuming S is a subset of natural numbers), otherwise these statements are trivially false. Any infinite subset of natural numbers won't have an upper bound. That's the core feature of the OP's proof.\n\nSo the contradictions you end up resolving to happen *because* you've assumed S is finite. Therefore, S must *not* be finite.\n\nLike, in the second statement:\n\n>((n >= k in S for all k) -> (n is in S)) -> (n+1 is in S) -> (n > n+1)\n\nYour premise is false. n can't be greater than or equal to all k in S *without* S being finite. So it's no surprise that, if you assume n >= k for all k in S, then it must be the case that S is finite (which is false), so that you can conclude n > n + 1.",
+            "subreddit": "math",
+            "created_utc": 1750199855.0,
+            "permalink": "https://reddit.com/r/math/comments/1ldxmkr/are_there_an_infinite_number_of_useful_integers/mycjpl5/",
+            "score": 1,
+            "parent_id": "t1_myce018"
+        },
+        {
+            "id": "myc2wf4",
+            "body": "You're assuming S is finite and reaching a contradiction, which implies S must be infinite, which is exactly the conclusion the OP made. How doesn't it work?\n\nLike, the statement:\n\n>n > k in S for all k\n\n... only makes sense if S is finite, right? Or at least has a maximum. But the point of the induction is to show that that *can't* be the case. So you've effectively agreed with the OP- S must be infinite.",
+            "subreddit": "math",
+            "created_utc": 1750194645.0,
+            "permalink": "https://reddit.com/r/math/comments/1ldxmkr/are_there_an_infinite_number_of_useful_integers/myc2wf4/",
+            "score": 7,
+            "parent_id": "t1_mybze2q"
+        },
+        {
+            "id": "mybnjmb",
+            "body": "If you like that, then you should checkout The Mythical Man-Month, which is where that phrase is from.",
+            "subreddit": "ExperiencedDevs",
+            "created_utc": 1750190299.0,
+            "permalink": "https://reddit.com/r/ExperiencedDevs/comments/1ldw60o/my_team_is_in_a_terrible_situation_that_i_caused/mybnjmb/",
+            "score": 28,
+            "parent_id": "t1_mybki5b"
+        },
+        {
+            "id": "myb8fwf",
+            "body": "This post convinced me to leave this sub.",
+            "subreddit": "advancedentrepreneur",
+            "created_utc": 1750185995.0,
+            "permalink": "https://reddit.com/r/advancedentrepreneur/comments/1lduy8l/how_being_a_failure_gave_me_a_1b_idea/myb8fwf/",
+            "score": 6,
+            "parent_id": "t3_1lduy8l"
+        },
+        {
+            "id": "mya6v41",
+            "body": ">It being thin doesnt do much beyond \"Uses less meat\"\n\nIt changes the crust-to-meat ratio. That's the whole point. And any place serving smash burgers that is worth going to will use multiple patties so that you end up with the same amount of meat as a normal burger.\n\nThis isn't an unpopular opinion; it's just a false fact.",
+            "subreddit": "unpopularopinion",
+            "created_utc": 1750175586.0,
+            "permalink": "https://reddit.com/r/unpopularopinion/comments/1ldo1jm/the_rise_in_smashburger_popularity_in_the_last/mya6v41/",
+            "score": 1,
+            "parent_id": "t3_1ldo1jm"
+        },
+        {
+            "id": "mxmqbwb",
+            "body": "I don't think there was much consideration for \"showcasing the area\" with the selection of Oakmont. It's a course that has been [hosting the U.S. Open for almost 100 hundred years](https://en.wikipedia.org/wiki/Oakmont_Country_Club#U.S._Opens), so it's not like this was just randomly decided out of nowhere.\n\nNot only that, but this *is* a major sporting tournament and not just some PR stunt. Like, they *are* trying to host a challenging golf competition, so there's going to be more weight put into the dynamics of the course over aesthetics.\n\nBut beyond all that, where *else* would you host it? The Bob? There's plenty of courses with pretty views, but they're all either far enough from the city that you might as well be anywhere else in the country or they simply don't work as courses suitable for a professional golf tournament.\n\nSo basically, no, we can't do better, mostly because the point isn't to showcase the area but, rather, to run a golf tournament, and this is the best the area has to offer on that front. I mean, I'm not going to call Pittsburgh ugly, but it *is* the epitome of rust belt industrialization, and the aesthetics of outside venues reflect that. There's not really a prettier place to host something like this anywhere near the city.",
+            "subreddit": "pittsburgh",
+            "created_utc": 1749848182.0,
+            "permalink": "https://reddit.com/r/pittsburgh/comments/1laqjdu/cmv_oakmont_is_a_shitty_course_to_try_and/mxmqbwb/",
+            "score": 7,
+            "parent_id": "t3_1laqjdu"
+        },
+        {
+            "id": "mxk7mw0",
+            "body": ">I thought about that approach, but then it felt kinda've overkill. Because the only consumers of that API would be the script, and the appsync backend for my website.\n\nYeah, this is basically the correct assessment.\n\nSetting up an API via API Gateway makes sense if you expect to extend this, or let others use this data, etc. But if that's not the case, and things work now and you don't expect the need to extend this or add features that utilizing an API Gateway would help facilitate, then don't bother. It's certainly not best practice to overcomplicate a working system for no reason.",
+            "subreddit": "aws",
+            "created_utc": 1749821863.0,
+            "permalink": "https://reddit.com/r/aws/comments/1l98a0i/api_gateway_vs_lambda_vs_direct_ddb_interaction/mxk7mw0/",
+            "score": 1,
+            "parent_id": "t3_1l98a0i"
+        },
+        {
+            "id": "mxek29i",
+            "body": "I mean, no offense, but you made a number of mistakes here that warrant losing.",
+            "subreddit": "Switch",
+            "created_utc": 1749744955.0,
+            "permalink": "https://reddit.com/r/Switch/comments/1l9ik3x/my_typical_mario_kart_world_online_experience/mxek29i/",
+            "score": 1,
+            "parent_id": "t3_1l9ik3x"
+        },
+        {
+            "id": "mxe65nk",
+            "body": "Although straight-up lying like you're Leonardo DiCaprio's character in \"Catch Me If You Can\" is destined to cause some serious issues in the long run, I *do* think it's worth \"speaking the same language\" as whoever it is you're talking to (so to speak).\n\nPeople often fail to *really* consider the perspectives of others in this setting. If you have 5 years of full-time experience and you're talking to an interviewer, they will only ever \"see\" a tiny fraction of that experience. Despite working tens of thousands of hours, interacting with dozens of different people, handling all sorts of weird cases and challenges, etc., you *must* boil all of that down into a relatively extremely short conversation. Furthermore, you're trying to sell you present and future self while only having evidence of your past self. Even if something clicked in your thought process last night that made you a real wiz in this stuff, you can only really share your experiences from the past where you likely weren't as good as you are now.\n\nSo, with all of that being said, it's important to sell yourself, and that will require you to effectively fill in the gaps that naturally arise in this situation. That doesn't mean you straight-up lie about scenarios, *especially* if those lies imply you can do things that you can't. But if you're confident that you *could* do something that you know they'd want you to be able to do, despite having never actually done that thing, then I think it's reasonable to present an actual situation you've been in in a way that communicates that to them. If you have to bend the truth a bit to really sell your story, then so be it. Odds are whatever story you tell won't be consistent with other's version of the same story anyways, so some idea of object \"truth\" isn't really practically real.\n\nI think this is one of those things that people learn as they just experience life. The past is necessarily a bastardized, biased narrative where you typically have to fill in missing details, and if you're doing so anyways, you might as well fill in those details such that the overall story is more effective. Is it lying? On a practical level, only if you saying something verifiably falseable. My policy is to only say things that I'm willing to have everybody I know hear and be able to call me out on (e.g., assume the interviewer is actually personal friends with my manager, previous employers, parents, etc., and expect they'll scrutinize every little detail of our conversation). If I wouldn't be willing to defend what I said in that context, then I won't say it. But you should be able to see that that still leaves a lot of room to tell a story that puts you in a better light than if you only rattled off the absolute objective truth.\n\nI'll add that I once worked with someone who straight-up lied about their experience, etc. It was very clear to me that they were under experienced and weren't long for the job *before* they decided to tell me that was the case (they were quite smug about how effectively they lied to get the job) while we were having a one-on-one offboarding meeting which they didn't realize was the case. That was an eye-opener in terms of seeing how blatant people are willing to lie, how effectively lying can be to get a job, and how ineffective lying ends up being in the long run.",
+            "subreddit": "ExperiencedDevs",
+            "created_utc": 1749741003.0,
+            "permalink": "https://reddit.com/r/ExperiencedDevs/comments/1l9ahos/when_job_hunting_how_often_do_you_lie_about_your/mxe65nk/",
+            "score": 1,
+            "parent_id": "t3_1l9ahos"
+        }
+    ]
+}

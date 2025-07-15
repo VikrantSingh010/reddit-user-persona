@@ -1,0 +1,128 @@
+{
+    "Interests": [
+        {
+            "topic": "Technology, innovation, and futurism",
+            "evidence": [
+                {
+                    "quote": "Spacial tours with 3D map and 360\u02da video",
+                    "source": "https://reddit.com/r/VisionPro/comments/1b4yi15/spacial_tours_with_3d_map_and_360_video/"
+                },
+                {
+                    "quote": "Can't wait for Vision Air 5 launching in 2034 with these transparent displays!",
+                    "source": "https://reddit.com/r/VisionPro/comments/1b36n83/cant_wait_for_vision_air_5_launching_in_2034_with/"
+                }
+            ]
+        },
+        {
+            "topic": "Gaming and game development",
+            "evidence": [
+                {
+                    "quote": "Hey I\u2019m an iOS developer building in visionOS. Do people have recommendations on resources to catch up on new featuresets for spacial computing?",
+                    "source": "https://reddit.com/r/visionosdev/comments/1b3yugb/best_blogs_tutorial_channels_to_learn/"
+                }
+            ]
+        },
+        {
+            "topic": "New York City and its culture",
+            "evidence": [
+                {
+                    "quote": "I feel like I'm at a college basement party. I thought that I must have been hallucinating, but Then a girl pointed at me and referred to me as the old person. That's when I knew I had to get out of there.",
+                    "source": "https://reddit.com/r/newyorkcity/comments/1lykkqf/i_feel_violated_by_intern_season/"
+                }
+            ]
+        }
+    ],
+    "Motivations": [
+        {
+            "motivation": "Exploration and discovery",
+            "evidence": [
+                {
+                    "quote": "I was at the wrong party. As I walk back home, all of a sudden I realize that there were now tens of thousands of 18 year-old 19 year-old 20-year-olds who were all living on top of each other and were super young and horny to basically use the New York nightlife as their own personal orgy dome.",
+                    "source": "https://reddit.com/r/newyorkcity/comments/1lykkqf/i_feel_violated_by_intern_season/"
+                }
+            ]
+        }
+    ],
+    "Personality Traits": [
+        {
+            "trait": "Curious and open-minded",
+            "evidence": [
+                {
+                    "quote": "I thought that I must have been hallucinating, but Then a girl pointed at me and referred to me as the old person. That's when I knew I had to get out of there.",
+                    "source": "https://reddit.com/r/newyorkcity/comments/1lykkqf/i_feel_violated_by_intern_season/"
+                }
+            ]
+        },
+        {
+            "trait": "Analytical and problem-solving",
+            "evidence": [
+                {
+                    "quote": "imo trading raw materials is easier than trading crafted goods in the current build. High quantity stuff is easy to stock, and you could have multiple trading posts up without any major issues.",
+                    "source": "https://reddit.com/r/ManorLords/comments/1lq4lst/this_is_acceptable/n1089i9/"
+                }
+            ]
+        }
+    ],
+    "Behaviour and Habits": [
+        {
+            "behavior": "Active participation in online communities",
+            "evidence": [
+                {
+                    "quote": "Sorry to hear that man, in the future you may want to have multiple granaries, one close to your berries/deer/fish and one for your veggies/apples/honey.",
+                    "source": "https://reddit.com/r/ManorLords/comments/1ly3nuf/my_granary_burned_down/n2r16t2/"
+                }
+            ]
+        },
+        {
+            "behavior": "Sharing personal experiences and opinions",
+            "evidence": [
+                {
+                    "quote": "I feel like I'm at a college basement party. I thought that I must have been hallucinating, but Then a girl pointed at me and referred to me as the old person. That's when I knew I had to get out of there.",
+                    "source": "https://reddit.com/r/newyorkcity/comments/1lykkqf/i_feel_violated_by_intern_season/"
+                }
+            ]
+        }
+    ],
+    "Frustrations": [
+        {
+            "frustration": "Feeling out of place or misunderstood",
+            "evidence": [
+                {
+                    "quote": "I feel like I'm at a college basement party. I thought that I must have been hallucinating, but Then a girl pointed at me and referred to me as the old person. That's when I knew I had to get out of there.",
+                    "source": "https://reddit.com/r/newyorkcity/comments/1lykkqf/i_feel_violated_by_intern_season/"
+                }
+            ]
+        }
+    ],
+    "Writing Style": [
+        {
+            "style": "Conversational and reflective",
+            "evidence": [
+                {
+                    "quote": "I feel like I'm at a college basement party. I thought that I must have been hallucinating, but Then a girl pointed at me and referred to me as the old person. That's when I knew I had to get out of there.",
+                    "source": "https://reddit.com/r/newyorkcity/comments/1lykkqf/i_feel_violated_by_intern_season/"
+                }
+            ]
+        }
+    ],
+    "Common Topics": [
+        {
+            "topic": "Technology and innovation",
+            "evidence": [
+                {
+                    "quote": "Spacial tours with 3D map and 360\u02da video",
+                    "source": "https://reddit.com/r/VisionPro/comments/1b4yi15/spacial_tours_with_3d_map_and_360_video/"
+                }
+            ]
+        },
+        {
+            "topic": "Gaming and game development",
+            "evidence": [
+                {
+                    "quote": "Hey I\u2019m an iOS developer building in visionOS. Do people have recommendations on resources to catch up on new featuresets for spacial computing?",
+                    "source": "https://reddit.com/r/visionosdev/comments/1b3yugb/best_blogs_tutorial_channels_to_learn/"
+                }
+            ]
+        }
+    ]
+}

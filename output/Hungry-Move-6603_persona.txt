@@ -1,0 +1,103 @@
+{
+    "Interests": [
+        {
+            "topic": "Reading, Productive weekend activities, Food, Tiffin services, Healthy eating",
+            "evidence": [
+                {
+                    "quote": "Reading Cafe / Reader' Club?",
+                    "source": "https://reddit.com/r/lucknow/comments/1lzuq0r/reading_cafe_reader_club/"
+                },
+                {
+                    "quote": "A menu easy to cook/process - healthy and quick.",
+                    "source": "https://reddit.com/r/lucknow/comments/1lwbwu9/any_tiffin_service_providing_high_quality_food/n2kh3aq/"
+                }
+            ]
+        }
+    ],
+    "Motivations": [
+        {
+            "motivation": "To share experiences, opinions, and advice with others",
+            "evidence": [
+                {
+                    "quote": "I was caught without helmet and license (close to my home). Cops outright wanted to fine me, but a 'common guy' came in and discussed bribe on my behalf with cops.",
+                    "source": "https://reddit.com/r/nagpur/comments/1lyb0p5/a_very_odd_experience/n2ybup0/"
+                }
+            ]
+        }
+    ],
+    "Personality_Traits": [
+        {
+            "trait": "Cynical, Observant, Sarcastic",
+            "evidence": [
+                {
+                    "quote": "What is the obsession peeps.",
+                    "source": "https://reddit.com/r/lucknow/comments/1lwyhny/everyone_is_something_in_lko/"
+                },
+                {
+                    "quote": "Dont you have big muscle brothers or friends? or cop/lawyer friends? My hands are always itching to teach a lesson to such people.",
+                    "source": "https://reddit.com/r/indiasocial/comments/1lwl70s/a_45_year_old_man_is_harassing_me/n2hx8z7/"
+                }
+            ]
+        }
+    ],
+    "Behaviour_and_Habits": [
+        {
+            "behavior": "Shares personal experiences and opinions, Participates in discussions, Uses humor and sarcasm",
+            "evidence": [
+                {
+                    "quote": "I was caught without helmet and license (close to my home). Cops outright wanted to fine me, but a 'common guy' came in and discussed bribe on my behalf with cops.",
+                    "source": "https://reddit.com/r/nagpur/comments/1lyb0p5/a_very_odd_experience/n2ybup0/"
+                },
+                {
+                    "quote": "Toh hum Noida or Ghaziabad se pahadio ko bhagana shuru karein fir? \ud83d\ude02 Bhukmari ajaegi",
+                    "source": "https://reddit.com/r/IndiaUnfilter/comments/1lw6ijt/people_are_smoking_hookah_in_the_middle_of_the/n2vkdpb/"
+                }
+            ]
+        }
+    ],
+    "Frustrations": [
+        {
+            "frustration": "Corruption, Poor quality of food, Frustration with societal norms",
+            "evidence": [
+                {
+                    "quote": "Malls are a thing of past - and entire LKO is on steroids in rents cost, despite low to no demand.",
+                    "source": "https://reddit.com/r/lucknow/comments/1lzfhve/what_has_happened_to_malls_like_wave_one_awadh/n34g4ea/"
+                },
+                {
+                    "quote": "I even purchased a 250 per meal tiffin and it had palm oil!!!",
+                    "source": "https://reddit.com/r/lucknow/comments/1lwbwu9/any_tiffin_service_providing_high_quality_food/n2hvomb/"
+                }
+            ]
+        }
+    ],
+    "Writing_Style": [
+        {
+            "style": "Conversational, Humorous, Sarcastic",
+            "evidence": [
+                {
+                    "quote": "What is the obsession peeps.",
+                    "source": "https://reddit.com/r/lucknow/comments/1lwyhny/everyone_is_something_in_lko/"
+                },
+                {
+                    "quote": "Toh hum Noida or Ghaziabad se pahadio ko bhagana shuru karein fir? \ud83d\ude02 Bhukmari ajaegi",
+                    "source": "https://reddit.com/r/IndiaUnfilter/comments/1lw6ijt/people_are_smoking_hookah_in_the_middle_of_the/n2vkdpb/"
+                }
+            ]
+        }
+    ],
+    "Common_Topics": [
+        {
+            "topic": "Lucknow, Uttar Pradesh, India, Corruption, Food, Tiffin services",
+            "evidence": [
+                {
+                    "quote": "Reading Cafe / Reader' Club?",
+                    "source": "https://reddit.com/r/lucknow/comments/1lzuq0r/reading_cafe_reader_club/"
+                },
+                {
+                    "quote": "Everyone is something in LKO",
+                    "source": "https://reddit.com/r/lucknow/comments/1lwyhny/everyone_is_something_in_lko/"
+                }
+            ]
+        }
+    ]
+}
