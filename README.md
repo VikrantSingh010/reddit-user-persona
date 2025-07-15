@@ -89,6 +89,11 @@ python main.py
 - Example: `https://www.reddit.com/user/kojied/`  
 
 ---
+### TESTING
+```
+test.py
+```
+---
 
 ### Streamlit App
 
@@ -98,6 +103,11 @@ streamlit run app.py
 - Use the web interface to enter Reddit URL and view persona output
 
 ---
+
+### TESTING
+```
+test.py
+```
 
 ## 📝 Example Output
 
